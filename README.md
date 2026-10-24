@@ -309,4 +309,4 @@ All geographic boundary data is sourced from **[faeldon/philippines-json-maps](h
 
 That work is itself built on **[altcoder/philippines-psgc-shapefiles](https://github.com/altcoder/philippines-psgc-shapefiles)**, which provides the high-resolution PSGC administrative boundary shapefiles that serve as the original source. Both are maintained by James Faeldon.
 
-This project would not be possible without that work.
+This project would not be possible without that work. .
