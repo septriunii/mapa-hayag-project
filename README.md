@@ -4,6 +4,8 @@
 
 The name combines two words: **Mapa**, meaning *map*, and **Hayag**, a word used in Visayan languages such as Cebuano, meaning *clear, visible, or revealed*. It also plays on the Tagalog word **mapahayag**, meaning *to express, communicate, or make something known*. Together, these meanings reflect the project's vision of revealing, communicating, and making Philippine geographic information more accessible and understandable to everyone.
 
+🌐 **Live Demo:** [Explore MAPA-Hayag](https://ph-drilldown-map.vercel.app/#/)
+
 ## Project Vision
 
 With continuous improvements in geographic accuracy, data integration, performance, and interactive features, **MAPA-Hayag** aims to evolve beyond a simple map viewer into a versatile Philippine geographic information platform.
@@ -46,6 +48,24 @@ Ultimately, **MAPA-Hayag** aspires to become an open, extensible, and community-
 | Barangays | Not yet supported |
 
 Certain geographic areas, including highly urbanized cities and NCR districts, require special handling.
+
+## Contributing
+
+**Contributions are welcome!** 🇵🇭
+
+MAPA-Hayag is an open-source project, and everyone interested in Philippine geography, mapping, and web development is encouraged to contribute.
+
+Whether you're a developer, designer, GIS enthusiast, researcher, or student, you can help improve the project by:
+
+- Reporting bugs and suggesting new features through GitHub Issues.
+- Submitting pull requests for improvements and bug fixes.
+- Improving the user interface, accessibility, and performance.
+- Validating geographic boundaries and updating geographic datasets.
+- Enhancing documentation and sharing ideas for future applications.
+
+Every contribution, big or small, helps make Philippine geographic information more accessible.
+
+**Let's build a more accessible, accurate, and interactive geographic platform for the Philippines, together!**
 
 ## Credits & Acknowledgments
 
