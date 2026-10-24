@@ -1,6 +1,6 @@
-# Philippine Interactive Geographic Map
+# MAPA-hayag project
 
-An open-source, interactive map of the Philippines for exploring administrative boundaries, geographic data, and location-based information.
+MAPA-Hayag is an open-source interactive geographic mapping platform designed to explore and visualize the Philippines' administrative boundaries and geographic information. Inspired by the Filipino words mapa (map) and hayag (to reveal or make known), the project aims to make geographic data more accessible, interactive, and understandable.
 
 **Project Status:** Active development — React modernization planned.
 
