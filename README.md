@@ -1,14 +1,24 @@
-# MAPA-hayag project
+# MAPA-Hayag Project
 
-MAPA-Hayag is an open-source interactive geographic mapping platform designed to explore and visualize the Philippines' administrative boundaries and geographic information. Inspired by the Filipino words mapa (map) and hayag (to reveal or make known), the project aims to make geographic data more accessible, interactive, and understandable.
+**MAPA-Hayag** is an open-source interactive geographic mapping platform designed to explore and visualize the Philippines' administrative boundaries and geographic information.
 
-**Project Status:** Active development — React modernization planned.
-
-**Live Demo:** https://ph-drilldown-map.vercel.app/
+The name combines two words: **Mapa**, meaning *map*, and **Hayag**, a word used in Visayan languages such as Cebuano, meaning *clear, visible, or revealed*. It also plays on the Tagalog word **mapahayag**, meaning *to express, communicate, or make something known*. Together, these meanings reflect the project's vision of revealing, communicating, and making Philippine geographic information more accessible and understandable to everyone.
 
 ## Project Vision
 
-Build a modern, accurate, scalable, and customizable Philippine geographic mapping platform that serves as a reusable foundation for geographic visualization, statistical analysis, public information, and location-based applications.
+With continuous improvements in geographic accuracy, data integration, performance, and interactive features, **MAPA-Hayag** aims to evolve beyond a simple map viewer into a versatile Philippine geographic information platform.
+
+The project is envisioned as a reusable foundation for various applications, including:
+
+- **Geographic Exploration** — Explore regions, provinces, cities, municipalities, and eventually barangays.
+- **Data Visualization** — Present population, demographics, economic indicators, and other geographic statistics.
+- **Disaster Risk Management** — Visualize flood-prone areas, hazard zones, evacuation centers, and disaster-related information.
+- **Infrastructure Mapping** — Locate schools, hospitals, roads, public facilities, and government services.
+- **Research and Education** — Support geographic studies, academic research, and interactive learning.
+- **Government and Public Information** — Make administrative and community-level information easier to explore.
+- **Custom Applications** — Enable developers to build their own geographic tools, dashboards, and location-based services.
+
+Ultimately, **MAPA-Hayag** aspires to become an open, extensible, and community-driven geographic platform that encourages innovation, transparency, and greater accessibility to Philippine geographic information.
 
 ## Technology Stack
 
