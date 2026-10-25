@@ -52,11 +52,13 @@ For manual legacy comparison, serve the repository root using any static HTTP se
 - Hash routing, deep-link reloads, browser Back/Forward, explicit parent Back controls, validated ancestry and maxDepth behavior. NCR bypasses districts; older NCR district city URLs canonicalize to direct city URLs. NIR and supplementary city routes preserve the active view hierarchy without changing their source codes.
 - Geographic zoom/fade transitions with cancellation, reduced-motion support, zoom reset on navigation and stale-response suppression. Source geometry warnings remain visible in the status indicator.
 
-The preview now supports full drilldown locally. The production entry-point replacement remains gated on final acceptance. Reference comparisons cover exact SVG paths and labels for ordinary regional/provincial views, NCR, NIR province/HUC composition and an isolated city, plus the welcome drawer geometry and styling. Cross-browser checks, complete device/animation acceptance, equivalent-workload performance profiling and Vercel preview verification remain. See the results document for evidence and limits.
+The preview supports full drilldown locally and on Vercel. The production entry-point replacement remains gated on final acceptance. Reference comparisons cover exact SVG paths and labels for ordinary regional/provincial views, NCR, NIR province/HUC composition and an isolated city, plus the welcome drawer geometry and styling. Cross-browser checks, complete device/animation acceptance and equivalent-workload performance profiling remain. See the results document for evidence and limits.
 
 The source includes GeoJSON only in its runtime paths; no TopoJSON decoder is introduced or needed for parity. No geometry is regenerated. Known null/malformed source geometry is reported; it is not repaired or invented.
 
 ## Vercel React preview
+
+[Open the verified React preview](https://mapahayag-5oiie6do2-septriuniis-projects.vercel.app/), or [the latest branch preview](https://mapahayag-ph-git-codex-react-migrat-3e280f-septriuniis-projects.vercel.app/). Sign in with your Vercel account if prompted. Production remains at the original domain.
 
 The build emits self-contained static files in react-app/dist. The asset plugin copies the existing configuration, geographic overrides, runtime geographic files and dataset license into dist and fails if required files are absent. It includes all low-resolution province files and the four medium-resolution NCR district files, avoiding the unused medium-resolution provinces and all higher-resolution/barangay datasets.
 
@@ -64,7 +66,7 @@ The migration branch contains root `vercel.json` for the existing `mapahayag-ph`
 
 `scripts/check-preview-target.mjs` rejects Vercel Production builds and cloud builds from any Git branch except `codex/react-migration-drilldown`. These checks run before installation and before building. Do not remove them or merge this configuration into main without the separate production-cutover review. No global Vercel project settings or production domains need to change for this branch preview. The original main deployment remains the production site.
 
-To run the browser suite against a deployed preview, set `MAPAHAYAG_TEST_URL` to its HTTPS origin and run `test:browser`. Protected previews can use a temporary deployment share token supplied through `MAPAHAYAG_PREVIEW_BYPASS` in the process environment. The runner exchanges it for cookies in memory, including for the mobile browser context; it never saves the token or adds it to third-party requests. Do not commit share tokens. Use `test:deployment` for the deployment-target guards. Cloud deployment and browser-test results are recorded in docs/migration/RESULTS.md after verification.
+To run the browser suite against a deployed preview, set `MAPAHAYAG_TEST_URL` to its HTTPS origin and run `test:browser`. Protected previews can use a temporary deployment share token supplied through `MAPAHAYAG_PREVIEW_BYPASS` in the process environment. The runner exchanges its `_vercel_share` URL parameter for cookies in memory, including for the mobile browser context; it never saves the token or adds it to third-party requests. Do not commit share tokens. Use `test:deployment` for the deployment-target guards, and `check:preview` to compare all deployed geographic JSON values, license text and JS/CSS bundles with the local build. These checks use Node 24. Cloud deployment and browser-test results are recorded in docs/migration/RESULTS.md.
 
 ## Attribution
 

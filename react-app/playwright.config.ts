@@ -9,9 +9,9 @@ if (process.env.MAPAHAYAG_PREVIEW_BYPASS) {
   try {
     const target = new URL(baseURL);
     if (target.protocol !== 'https:' || !target.hostname.endsWith('.vercel.app')) throw new Error('Use the managed HTTPS Vercel preview URL for share-token authentication');
-    let response = await context.get(baseURL, {
+    target.searchParams.set('_vercel_share', process.env.MAPAHAYAG_PREVIEW_BYPASS);
+    let response = await context.get(target.href, {
       maxRedirects: 0,
-      headers: { 'x-vercel-protection-bypass': process.env.MAPAHAYAG_PREVIEW_BYPASS, 'x-vercel-set-bypass-cookie': 'true' },
     });
     const redirect = response.headers().location;
     if (redirect && response.status() >= 300 && response.status() < 400) {

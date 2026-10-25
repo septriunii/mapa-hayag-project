@@ -1,6 +1,6 @@
 # React migration verification
 
-Baseline: `e1ad7e6783956ca96d4158fdb44406d06dd16caf`. Task date: 25 October 2026. No production entry point, domain, geographic source file, or deployment workflow was changed. No migration commit was pushed and nothing was deployed.
+Baseline: `e1ad7e6783956ca96d4158fdb44406d06dd16caf`. Task date: 25 October 2026. The React migration is committed on `codex/react-migration-drilldown` and deployed to Vercel Preview as recorded below. No production entry point, domain, geographic source file, or existing deployment workflow was changed.
 
 ## Stage 1 — baseline characterization
 
@@ -48,7 +48,7 @@ Stage 1 had no production bundle to build; the original application is static HT
 - First foundation bundle using dynamic D3 namespace lookup: 609.84 KB JS / 193.90 KB gzip. Replacing it with named imports reduced the same preview to approximately 401.63 KB JS / 127.26 KB gzip. Final CSS is approximately 12.71 KB / 3.49 KB gzip. Build outputs may vary slightly with later metadata changes.
 - Cache test: simultaneous and repeated access to one validated configuration URL generated one fetch. Repeated province loads generated two total fetches (one province file plus the shared city supplement), including concurrent consumers.
 - Initial national browser load fetched one config and one national collection, with no province/municipality downloads. Data remains outside the JavaScript bundle.
-- The baseline runner's elapsed-at-snapshot includes fixed waits; it is a diagnostic timestamp, not time-to-interactive or a speed claim. No trustworthy before/after frame-rate, cold-network startup, memory or full-drilldown timing comparison is available yet. The partial React preview cannot establish a whole-application performance improvement.
+- The baseline runner's elapsed-at-snapshot includes fixed waits; it is a diagnostic timestamp, not time-to-interactive or a speed claim. No trustworthy before/after frame-rate, cold-network startup, memory or full-drilldown timing comparison is available yet. These measurements do not establish a whole-application performance improvement.
 
 ## Drilldown increment
 
@@ -78,14 +78,31 @@ The isolated React application now renders national → regional → provincial 
 
 - Created `react-app/src/navigation/view.ts`, `view.test.ts`, `react-app/src/hooks/useMapNavigation.ts`, `useMapNavigation.test.tsx`, `react-app/tests/geographyFixture.ts` and `react-app/tests/browser/drilldown.spec.ts`.
 - Modified `react-app/src/app/App.tsx`, `react-app/src/components/MapCanvas.tsx`, `react-app/src/geography/projection.ts`, `react-app/src/styles/index.css`, `react-app/tests/browser/foundation.spec.ts`, both READMEs and this results document.
-- Root production HTML, data/configuration, original boundaries, pinned submodule revision, deployment workflow and both legacy reference copies remain unchanged by this increment. Changes are local, uncommitted and undeployed.
+- Root production HTML, data/configuration, original boundaries, pinned submodule revision, deployment workflow and both legacy reference copies remain unchanged by this increment. Drilldown was committed and pushed as `35b8c30`; Vercel preview setup followed as `6a6405d`.
+
+## Verified Vercel Preview
+
+- **Preview URL:** [React preview](https://mapahayag-5oiie6do2-septriuniis-projects.vercel.app/).
+- **Branch URL:** [Latest React branch preview](https://mapahayag-ph-git-codex-react-migrat-3e280f-septriuniis-projects.vercel.app/).
+- **Project/team:** existing `mapahayag-ph` project (`prj_0IJGe4vmJeBOqbjEmkaLgrxLE7C2`) under `septriuniis-projects`. Authenticated access was verified after the user approved the team grant.
+- **Tested deployment:** `dpl_J9h2K5Gp6ysMjJMiQDU1tkic6kft`, state READY, Preview environment (API target null), source commit `6a6405deeece4ba9497b3227f0d3aea2646cdc4b` on `codex/react-migration-drilldown`.
+- The initial automatic branch deployment served legacy HTML. Added root vercel.json on the React branch to select Vite, install pinned pnpm 11.25.0 with a frozen lockfile, build react-app, verify asset copies and publish react-app/dist. The existing project uses Node 24. No global project build settings or production aliases were edited.
+- `check-preview-target.mjs` runs before installation and building. Its **four tests pass**: accept the approved Preview branch, reject Production, reject an unspecified cloud environment or another branch, and allow local validation.
+- Cloud checkout used the existing public geographic submodule. TypeScript/Vite build succeeded; cloud asset verification passed for **117 assets / 3,344,104 bytes**. The byte count differs from Windows checkout because of Git text line-ending normalization. Geometry and identifiers were not changed.
+- Cloud bundles match the local build: JS **409.81 KB / 129.84 KB gzip**, CSS **13.40 KB / 3.69 KB gzip**. The log reported a 69.395s source clone, 847ms Vite build and 23s Vercel build phase (includes install/checks). These are build timings, not application performance.
+- **All 18 existing browser tests passed against the hosted Preview**, including ordinary/NIR/legacy/HUC/NCR drilldown, browser history, deep-link reloads, mobile/coarse-pointer layouts, errors/Retry, maxDepth, zoom, safe text rendering and legacy visual comparisons.
+- `check:preview` compared **116 deployed JSON files and three other assets** against the local build. Every parsed JSON value matched, including all coordinates/PSGCs; JavaScript and CSS bytes matched exactly; license text matched after CRLF/LF normalization. This also checks that geographic URLs return their actual files rather than an HTML fallback.
+- Protected preview verification used a temporary deployment-scoped share link exchanged for cookies in memory. The runner uses `_vercel_share` for this link, distinct from project automation-bypass headers. No protection was disabled, no persistent automation credential was created, and no tokens/cookies are committed or saved as test artifacts. Normal preview visitors may need to sign in to their Vercel account.
+- Re-ran the **59 application tests / 10 suites** successfully. Production domain `mapahayag-ph.vercel.app` was checked before and after setup: it still points to **`dpl_8H9T3DqG1HhFVvgNk1mCuZ7UN9pz`**, the original `main` commit `e1ad7e6`.
+
+Preview files: root vercel.json; `react-app/scripts/check-preview-target.mjs` and its tests; deployed asset verifier; remote/authenticated Playwright configuration and runner; mobile context authentication; README and results updates. These remain on the React branch.
 
 ## Remaining work and next gate
 
-1. User acceptance of the full local drilldown and its animations across target desktop/mobile devices. Exact geometry/label comparisons cover representative views; this is not an exhaustive screenshot comparison of every administrative unit or device.
+1. User acceptance of the hosted preview and its animations across target desktop/mobile devices. Exact geometry/label comparisons cover representative views; this is not an exhaustive screenshot comparison of every administrative unit or device.
 2. Cross-browser verification beyond installed Edge; equivalent-workload startup, frame-rate and memory profiling. No whole-application speed improvement is claimed.
 3. Resolve the known malformed SGA and null-geometry source records only through a separately reviewed data correction. Geographic freshness/current PSA reconciliation remains a separate task.
-4. Verify the pinned submodule checkout and build settings in a non-production Vercel preview. No authenticated Vercel settings inspection or deployment has been performed.
+4. Retain the verified Vercel Preview configuration while making further changes on the React branch. Production cutover needs a separate review, including removal or replacement of the Preview-only build guard.
 5. Stop before production-entry replacement, legacy deletion or production deployment until explicitly authorized.
 
-Recommended next step: try the local React app at `http://127.0.0.1:5173/`, exercise ordinary/NIR/NCR drilldown and browser navigation, and complete acceptance checks before considering a production cutover. Use `?alignment=legacy` to compare the 17-region alignment. Local startup commands remain in react-app/README.md.
+Recommended next step: try the hosted React Preview above, exercise ordinary/NIR/NCR drilldown and browser navigation, and complete acceptance checks before considering a production cutover. Use `?alignment=legacy` to compare the 17-region alignment. Local startup and deployed-test commands remain in react-app/README.md.
