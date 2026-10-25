@@ -53,8 +53,8 @@ test('explicit legacy alignment loads 17 regions', async ({ page }) => {
   await expect(page.locator('path[data-psgc="1800000000"]')).toHaveCount(0);
 });
 
-test('coarse-pointer layout starts closed and remains a left drawer on resize', async ({ browser }) => {
-  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true });
+test('coarse-pointer layout starts closed and remains a left drawer on resize', async ({ browser, storageState }) => {
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, storageState });
   const page = await context.newPage();
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);

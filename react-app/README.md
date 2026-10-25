@@ -56,11 +56,15 @@ The preview now supports full drilldown locally. The production entry-point repl
 
 The source includes GeoJSON only in its runtime paths; no TopoJSON decoder is introduced or needed for parity. No geometry is regenerated. Known null/malformed source geometry is reported; it is not repaired or invented.
 
-## Future Vercel setup (do not apply yet)
+## Vercel React preview
 
 The build emits self-contained static files in react-app/dist. The asset plugin copies the existing configuration, geographic overrides, runtime geographic files and dataset license into dist and fails if required files are absent. It includes all low-resolution province files and the four medium-resolution NCR district files, avoiding the unused medium-resolution provinces and all higher-resolution/barangay datasets.
 
-For a future isolated preview project, use repository root as the Vercel root directory so the build can read the adjacent pinned data. Candidate settings: install `pnpm --dir react-app install --frozen-lockfile`, build `pnpm --dir react-app build`, output `react-app/dist`, Node 24. Ensure checkout includes the pinned submodule before the build. If Vercel does not populate it, add a reviewed explicit initialization step; do not fetch a moving upstream branch. Existing hosting settings have not been inspected through an authenticated Vercel connection, so this remains a configuration proposal, not a verified Vercel deployment. No production configuration/domain was changed.
+The migration branch contains root `vercel.json` for the existing `mapahayag-ph` project's Preview environment. The repository root stays the build root so Vite can copy the adjacent geographic datasets. Installation uses pinned pnpm 11.25.0 and the frozen lockfile; the build runs TypeScript/Vite and verifies copied asset hashes. Output is `react-app/dist`. The existing Vercel project uses Node 24. The public HTTPS geographic submodule must be available at its recorded gitlink revision; missing assets fail the build. Do not point the root directory at react-app, because that would exclude the adjacent data.
+
+`scripts/check-preview-target.mjs` rejects Vercel Production builds and cloud builds from any Git branch except `codex/react-migration-drilldown`. These checks run before installation and before building. Do not remove them or merge this configuration into main without the separate production-cutover review. No global Vercel project settings or production domains need to change for this branch preview. The original main deployment remains the production site.
+
+To run the browser suite against a deployed preview, set `MAPAHAYAG_TEST_URL` to its HTTPS origin and run `test:browser`. Protected previews can use a temporary deployment share token supplied through `MAPAHAYAG_PREVIEW_BYPASS` in the process environment. The runner exchanges it for cookies in memory, including for the mobile browser context; it never saves the token or adds it to third-party requests. Do not commit share tokens. Use `test:deployment` for the deployment-target guards. Cloud deployment and browser-test results are recorded in docs/migration/RESULTS.md after verification.
 
 ## Attribution
 
