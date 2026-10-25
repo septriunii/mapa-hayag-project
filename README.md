@@ -28,6 +28,8 @@ Ultimately, **MAPA-Hayag** aspires to become an open, extensible, and community-
 
 **Planned:** React.js, TypeScript, Tailwind CSS, Vite, D3.js, GeoJSON/TopoJSON
 
+An isolated React migration preview is available in [`react-app/`](react-app/README.md), including national → regional → provincial → city/municipality drilldown, validated configuration, cached geographic services, NIR/legacy alignment and browser navigation. The root HTML applications remain the production entry points, with runnable comparison copies in [`legacy/`](legacy/README.md). See the [baseline contract](docs/migration/BASELINE.md) and [verification results](docs/migration/RESULTS.md) for current validation and remaining acceptance gates.
+
 ## Current Features
 
 - Interactive Philippine map with administrative drilldown

@@ -1,1 +1,6 @@
 CLAUDE.md
+.pnpm-store/
+react-app/node_modules/
+react-app/dist/
+react-app/test-results/
+react-app/playwright-report/
