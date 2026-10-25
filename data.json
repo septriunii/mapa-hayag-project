@@ -1,5 +1,5 @@
 {
-  "title": "Philippines Drilldown Map",
+  "title": "MAPAhayag project",
   "description": "An interactive map of the Philippines. Click any region to drill in.",
   "maxDepth": "municity",
   "geoBasePath": "./philippines-json-maps",

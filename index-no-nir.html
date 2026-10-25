@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>Philippines Map</title>
+<title>MAPAhayag project</title>
 <script src="https://unpkg.com/d3@7/dist/d3.min.js"></script>
 <style>
   /* ── Theme variables ── */
   :root {
+    color-scheme: dark;
     --bg:               #1a1a2e;
     --panel-bg:         #12121f;
     --panel-border:     rgba(255,255,255,0.1);
@@ -44,44 +45,6 @@
     --strong-color:     rgba(255,255,255,0.6);
     --data-label-color: rgba(255,255,255,0.4);
     --data-value-color: rgba(255,255,255,0.85);
-  }
-  :root.light {
-    --bg:               #edf1f7;
-    --panel-bg:         #ffffff;
-    --panel-border:     rgba(0,0,0,0.09);
-    --panel-divider:    rgba(0,0,0,0.07);
-    --poly-fill:        #bacfe3;
-    --poly-stroke:      rgba(40,65,105,0.3);
-    --hover-stroke:     #2a3f60;
-    --label-fill:       #1a2840;
-    --label-stroke:     rgba(237,241,247,0.92);
-    --btn-bg:           rgba(0,0,0,0.06);
-    --btn-border:       rgba(0,0,0,0.18);
-    --btn-color:        #1a2840;
-    --btn-hover-bg:     rgba(0,0,0,0.11);
-    --status-color:     #556;
-    --status-bg:        rgba(255,255,255,0.88);
-    --close-color:      rgba(0,0,0,0.35);
-    --close-hover:      #000;
-    --eyebrow-color:    rgba(0,0,0,0.38);
-    --lgu-name-color:   #1a2840;
-    --region-color:     rgba(0,0,0,0.48);
-    --scroll-thumb:     rgba(0,0,0,0.1);
-    --card-bg:          rgba(0,0,0,0.03);
-    --card-border:      rgba(0,0,0,0.08);
-    --year-color:       rgba(0,0,0,0.45);
-    --year-bg:          rgba(0,0,0,0.05);
-    --text-color:       rgba(0,0,0,0.68);
-    --expand-color:     rgba(0,0,0,0.35);
-    --expand-hover:     #000;
-    --no-data-color:    rgba(0,0,0,0.28);
-    --section-color:    rgba(0,0,0,0.28);
-    --drag-handle:      rgba(0,0,0,0.12);
-    --mobile-border:    rgba(0,0,0,0.1);
-    --ring-color:       rgba(0,0,0,0.3);
-    --strong-color:     rgba(0,0,0,0.65);
-    --data-label-color: rgba(0,0,0,0.42);
-    --data-value-color: rgba(0,0,0,0.85);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -122,19 +85,11 @@
     z-index: 10;
     display: none;
   }
-  #back-btn { left: 16px; }
-  #info-btn { right: 16px; font-size: 15px; padding: 6px 12px; }
+  #back-btn { right: 16px; }
+  #info-btn { left: 16px; width: 44px; height: 44px; padding: 10px; font-size: 24px; line-height: 1; }
+  body.detail-open #info-btn { display: none !important; }
   #back-btn:hover, #info-btn:hover { background: var(--btn-hover-bg); }
 
-  /* Theme toggle lives inside the detail panel header */
-  #theme-btn {
-    background: none; border: none;
-    color: var(--eyebrow-color); font: 11px monospace;
-    letter-spacing: 0.8px; text-transform: uppercase;
-    cursor: pointer; padding: 0;
-    transition: color 0.15s;
-  }
-  #theme-btn:hover { color: var(--lgu-name-color); }
 
   #status {
     position: fixed; bottom: 8px; left: 12px;
@@ -144,41 +99,19 @@
     transition: color 0.25s, background 0.25s;
   }
 
-  /* ── Detail panel — desktop ── */
+  /* Details drawer slides in from the left on every screen size. */
   #detail {
-    position: fixed; top: 0; right: -380px; bottom: 0; width: 360px;
-    background: var(--panel-bg); border-left: 1px solid var(--panel-border);
+    position: fixed; top: 0; left: 0; bottom: 0;
+    width: min(360px, 100%);
+    background: var(--panel-bg); border-right: 1px solid var(--panel-border);
     display: flex; flex-direction: column;
-    transition: right 0.35s cubic-bezier(0.4,0,0.2,1),
-                background 0.25s, border-color 0.25s;
+    transform: translateX(-100%);
+    visibility: hidden;
+    transition: transform 0.35s cubic-bezier(0.4,0,0.2,1),
+                visibility 0.35s;
     z-index: 20; overflow: hidden;
   }
-  #detail.open { right: 0; }
-  #detail.peek { right: -285px; }
-
-  /* ── Detail panel — mobile ── */
-  @media (pointer: coarse) {
-    #detail {
-      width: 100%; right: 0; top: auto; bottom: 0; height: 55vh;
-      border-left: none; border-top: 1px solid var(--mobile-border);
-      border-radius: 14px 14px 0 0;
-      transform: translateY(100%);
-      transition: transform 0.38s cubic-bezier(0.4,0,0.2,1),
-                  background 0.25s;
-    }
-    #detail.open  { right: 0; transform: translateY(0); }
-    #detail.peek  { right: 0; transform: translateY(calc(100% - 56px)); }
-    #detail-header { padding-top: 22px; }
-  }
-
-  #detail::before {
-    content: ''; display: none;
-    width: 36px; height: 4px;
-    background: var(--drag-handle);
-    border-radius: 2px;
-    position: absolute; top: 8px; left: 50%; transform: translateX(-50%);
-  }
-  @media (pointer: coarse) { #detail::before { display: block; } }
+  #detail.open { transform: translateX(0); visibility: visible; }
 
   @keyframes info-ring {
     0%   { box-shadow: 0 0 0 0 var(--ring-color); }
@@ -227,15 +160,14 @@
 <body>
 <svg id="map"></svg>
 <button id="back-btn">← Back</button>
-<button id="info-btn">ℹ Details</button>
+<button id="info-btn" type="button" aria-label="Open details menu" aria-controls="detail" aria-expanded="false">☰</button>
 <div id="status">Loading…</div>
-<div id="detail">
+<div id="detail" role="complementary" aria-label="Location details" inert>
   <div id="detail-header">
     <div id="detail-header-row">
       <div class="detail-eyebrow" id="detail-eyebrow">—</div>
       <div style="display:flex;gap:12px;align-items:center">
-        <button id="theme-btn" title="Toggle theme">Dark</button>
-        <button id="detail-close">✕</button>
+        <button id="detail-close" type="button" aria-label="Close details menu">✕</button>
       </div>
     </div>
     <div class="detail-lgu-name" id="detail-lgu-name">—</div>
@@ -248,22 +180,9 @@
 const status   = document.getElementById('status');
 const backBtn  = document.getElementById('back-btn');
 const infoBtn  = document.getElementById('info-btn');
-const themeBtn = document.getElementById('theme-btn');
 const svgEl    = document.getElementById('map');
 const svg      = d3.select('#map');
 const g        = svg.append('g');
-
-// ── Theme toggle ──────────────────────────────────────────────────────────────
-(function() {
-  const saved = localStorage.getItem('ph-map-theme');
-  if (saved === 'dark') document.documentElement.classList.remove('light');
-  themeBtn.textContent = document.documentElement.classList.contains('light') ? 'Dark' : 'Light';
-  themeBtn.addEventListener('click', () => {
-    const isLight = document.documentElement.classList.toggle('light');
-    themeBtn.textContent = isLight ? 'Dark' : 'Light';
-    localStorage.setItem('ph-map-theme', isLight ? 'light' : 'dark');
-  });
-})();
 
 // ── Config & data ─────────────────────────────────────────────────────────────
 let config = {};
@@ -526,13 +445,6 @@ async function loadNational() {
   } else {
     pushURL('/');
     drawNational();
-    if (isMobile) {
-      // Peek the bottom sheet after a beat to hint it exists
-      setTimeout(() => {
-        detail.classList.add('peek');
-        setTimeout(() => detail.classList.remove('peek'), 1600);
-      }, 1400);
-    }
   }
 }
 
@@ -544,7 +456,7 @@ function openWelcome() {
     ? `<p style="font-size:12px;color:var(--text-color);line-height:1.8;margin-top:8px">${config.description}</p>`
     : '';
   detailBody.innerHTML = `<div class="no-findings" style="text-align:left;padding:20px 0">${desc}</div>`;
-  detail.classList.add('open');
+  showDetail();
 }
 
 function showInfoBtn() {
@@ -853,13 +765,29 @@ function populateDetail(lguName, parentName, psgc, type = 'municity') {
 
 function openDetail(lguName, parentName, psgc, type = 'municity') {
   populateDetail(lguName, parentName, psgc, type);
-  detail.classList.remove('peek');
+  showDetail();
+}
+
+function showDetail() {
+  detail.inert = false;
   detail.classList.add('open');
+  document.body.classList.add('detail-open');
+  infoBtn.setAttribute('aria-expanded', 'true');
 }
 
 function closeDetail() {
+  const hadFocus = detail.contains(document.activeElement);
   detail.classList.remove('open');
+  detail.inert = true;
+  document.body.classList.remove('detail-open');
+  infoBtn.style.display = 'block';
+  infoBtn.setAttribute('aria-expanded', 'false');
+  if (hadFocus) infoBtn.focus();
 }
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && detail.classList.contains('open')) closeDetail();
+});
 
 infoBtn.addEventListener('click', () => {
   if (currentContext) {
@@ -872,7 +800,7 @@ infoBtn.addEventListener('click', () => {
 // ── Boot ──────────────────────────────────────────────────────────────────────
 async function boot() {
   await loadConfig();
-  document.title = config.title || 'Philippines Map';
+  document.title = 'MAPAhayag project';
   await loadNational();
 }
 boot();
