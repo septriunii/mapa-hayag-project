@@ -4,7 +4,7 @@
 
 The name combines two words: **Mapa**, meaning *map*, and **Hayag**, a word used in Visayan languages such as Cebuano, meaning *clear, visible, or revealed*. It also plays on the Tagalog word **mapahayag**, meaning *to express, communicate, or make something known*. Together, these meanings reflect the project's vision of revealing, communicating, and making Philippine geographic information more accessible and understandable to everyone.
 
-🌐 **Live Demo:** [Explore MAPA-Hayag](https://ph-drilldown-map.vercel.app/#/)
+🌐 **Live Demo:** [Explore MAPA-Hayag](https://mapahayag-ph.vercel.app/#/) 
 
 ## Project Vision
 
