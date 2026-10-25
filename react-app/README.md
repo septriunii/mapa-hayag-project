@@ -41,6 +41,8 @@ pnpm --dir react-app test:browser
 
 `MAPAHAYAG_TEST_DEV=1` runs the same browser suite against the development server instead of dist. The baseline runner serves root/legacy files and substitutes the locally installed D3 7 distribution for the external CDN response. It never rewrites source files. The build verifier compares SHA-256 hashes for copied assets. Browser artifacts live in ignored test-results/.
 
+For the Chromium/Firefox/WebKit desktop and emulated Pixel/iPhone/iPad matrix, install all three Playwright browsers and set `MAPAHAYAG_CROSS_BROWSER=1` before running `test:browser --workers=1`. The default single-browser suite continues to support an installed Edge executable. `test:performance` compares the production bundle with unchanged original HTML on the same local gzip server, with five runs per app/profile; it writes ignored performance-results/. See the [release checks](../docs/migration/RELEASE-CHECKS.md) for results, reproduction commands and emulation limits.
+
 For manual legacy comparison, serve the repository root using any static HTTP server, then open `/legacy/index.html` or `/legacy/index-no-nir.html`. The root production pages work as before. Do not open via file:// because the applications fetch JSON.
 
 ## Implemented in this increment
@@ -52,7 +54,7 @@ For manual legacy comparison, serve the repository root using any static HTTP se
 - Hash routing, deep-link reloads, browser Back/Forward, explicit parent Back controls, validated ancestry and maxDepth behavior. NCR bypasses districts; older NCR district city URLs canonicalize to direct city URLs. NIR and supplementary city routes preserve the active view hierarchy without changing their source codes.
 - Geographic zoom/fade transitions with cancellation, reduced-motion support, zoom reset on navigation and stale-response suppression. Source geometry warnings remain visible in the status indicator.
 
-The preview supports full drilldown locally and on Vercel. The production entry-point replacement remains gated on final acceptance. Reference comparisons cover exact SVG paths and labels for ordinary regional/provincial views, NCR, NIR province/HUC composition and an isolated city, plus the welcome drawer geometry and styling. Cross-browser checks, complete device/animation acceptance and equivalent-workload performance profiling remain. See the results document for evidence and limits.
+The preview supports full drilldown locally and on Vercel. The production entry-point replacement remains gated on final acceptance. Reference comparisons cover exact SVG paths and labels for ordinary regional/provincial views, NCR, NIR province/HUC composition and an isolated city, plus the welcome drawer geometry and styling. Cross-browser checks and equivalent-workload performance profiling are recorded in the release checks. Actual-device/animation acceptance remains; emulated devices do not establish physical Safari compatibility or touch performance.
 
 The source includes GeoJSON only in its runtime paths; no TopoJSON decoder is introduced or needed for parity. No geometry is regenerated. Known null/malformed source geometry is reported; it is not repaired or invented.
 

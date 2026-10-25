@@ -17,7 +17,7 @@
   @keyframes map-reveal { from { opacity: 0; } to { opacity: 1; } }
 }
 
-:root { color-scheme: dark; font-family: 'Times New Roman'; line-height: normal; }
+:root { color-scheme: dark; font-family: serif; line-height: normal; }
 html, body, #root { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #1a1a2e; }
 #detail-body::-webkit-scrollbar { width: 3px; }
 #detail-body::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); }

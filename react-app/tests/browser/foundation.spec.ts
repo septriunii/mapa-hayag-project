@@ -53,8 +53,9 @@ test('explicit legacy alignment loads 17 regions', async ({ page }) => {
   await expect(page.locator('path[data-psgc="1800000000"]')).toHaveCount(0);
 });
 
-test('coarse-pointer layout starts closed and remains a left drawer on resize', async ({ browser, storageState }) => {
-  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: true, hasTouch: true, storageState });
+test('coarse-pointer layout starts closed and remains a left drawer on resize', async ({ browser, browserName, storageState }) => {
+  // Playwright Firefox supports touch emulation but not the isMobile option.
+  const context = await browser.newContext({ viewport: { width: 390, height: 844 }, isMobile: browserName !== 'firefox', hasTouch: true, storageState });
   const page = await context.newPage();
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
@@ -104,10 +105,16 @@ test('matches the baseline welcome drawer geometry and text styling', async ({ p
   await baseline.goto('/baseline.html');
   await expect(baseline.locator('path.region')).toHaveCount(18);
   await expect(baseline.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  const snapshot = () => ['detail', 'detail-header', 'detail-eyebrow', 'detail-lgu-name', 'detail-region', 'detail-close', 'detail-body'].map(id => {
-    const element = document.getElementById(id)!;
+  const snapshot = () => ['detail', 'detail-header', 'detail-eyebrow', 'detail-lgu-name', 'detail-region', 'detail-close', 'detail-body', 'description'].map(id => {
+    const element = id === 'description' ? document.querySelector('#detail-body p')! : document.getElementById(id)!;
     const box = element.getBoundingClientRect(), style = getComputedStyle(element);
-    return { id, x: box.x, y: box.y, width: box.width, height: box.height, font: style.fontFamily, size: style.fontSize, lineHeight: style.lineHeight, color: style.color, bg: style.backgroundColor };
+    // Firefox reports its equivalent browser-default fonts as "serif" and
+    // "MS Shell Dlg 2". Compare rendered glyph metrics, not family aliases.
+    const canvas = document.createElement('canvas').getContext('2d')!;
+    canvas.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
+    const directText = [...element.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent?.trim() ?? '').join('');
+    const textWidth = directText ? canvas.measureText(directText).width : undefined;
+    return { id, x: box.x, y: box.y, width: box.width, height: box.height, textWidth, size: style.fontSize, lineHeight: style.lineHeight, color: directText ? style.color : undefined, bg: style.backgroundColor };
   });
   expect(await page.evaluate(snapshot)).toEqual(await baseline.evaluate(snapshot));
   await baseline.close();

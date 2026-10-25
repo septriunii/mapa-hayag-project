@@ -97,10 +97,16 @@ The isolated React application now renders national → regional → provincial 
 
 Preview files: root vercel.json; `react-app/scripts/check-preview-target.mjs` and its tests; deployed asset verifier; remote/authenticated Playwright configuration and runner; mobile context authentication; README and results updates. These remain on the React branch.
 
+## Browser/mobile and performance increment
+
+See [release checks and measurements](RELEASE-CHECKS.md) and [per-run evidence](performance-evidence.json) for the expanded Chromium/Firefox/WebKit and emulated Android/iPhone/iPad coverage. The original application and geographic sources remain unchanged. The earlier counts and measurements above are historical stage records.
+
+This increment fixes narrow-screen Back/hamburger overlap, WebKit's one-pixel font-inheritance discrepancy and viewport subscription/measurement timing after rotation. All **63 browser cases pass** across the six desktop/device projects. Allocation-light coordinate validation preserves all checks and source geometry while lowering retained React heap by approximately 30% in the controlled workflow. Application validation now covers 81 tests across 12 suites; the four deployment guards remain. Build and copied-asset validation pass. React's throttled cold mobile startup remains slower than the original; the report documents the tradeoff without claiming a general speedup.
+
 ## Remaining work and next gate
 
 1. User acceptance of the hosted preview and its animations across target desktop/mobile devices. Exact geometry/label comparisons cover representative views; this is not an exhaustive screenshot comparison of every administrative unit or device.
-2. Cross-browser verification beyond installed Edge; equivalent-workload startup, frame-rate and memory profiling. No whole-application speed improvement is claimed.
+2. Review the completed automated cross-browser/emulated-device checks and controlled startup, frame-interval and memory measurements. Physical-device Safari/touch acceptance and acceptance of the cold-start tradeoff remain. No whole-application speed improvement is claimed.
 3. Resolve the known malformed SGA and null-geometry source records only through a separately reviewed data correction. Geographic freshness/current PSA reconciliation remains a separate task.
 4. Retain the verified Vercel Preview configuration while making further changes on the React branch. Production cutover needs a separate review, including removal or replacement of the Preview-only build guard.
 5. Stop before production-entry replacement, legacy deletion or production deployment until explicitly authorized.

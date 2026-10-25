@@ -18,7 +18,8 @@
     "test:deployment": "node --test scripts/check-preview-target.test.mjs",
     "check:resources": "node scripts/check-resources.mjs",
     "check:build": "node scripts/verify-build.mjs",
-    "check:preview": "node scripts/verify-deployed-assets.mjs"
+    "check:preview": "node scripts/verify-deployed-assets.mjs",
+    "test:performance": "node scripts/performance-check.mjs"
   },
   "dependencies": {
     "d3": "7.9.0",

@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { readFileSync } from 'node:fs';
+import { selectSvgLabel } from './svgInput';
 
 async function ready(page: Page, hash: string) {
   await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
@@ -28,7 +29,7 @@ test('ordinary drilldown, parent controls, browser history, deep links and cache
   await expect(page.locator('#back-btn')).toContainText('Region IX');
   await page.getByRole('button', { name: 'Close details menu' }).click();
   // Real mouse hit on a label preserves access to tiny municipality polygons.
-  await page.locator('text[data-label-psgc="907201000"]').click();
+  await selectSvgLabel(page, 'text[data-label-psgc="907201000"]');
   const cityHash = provinceHash + '/municity/907201000';
   await ready(page, cityHash);
   await expect(page.locator('path[data-psgc]')).toHaveCount(1);
@@ -215,7 +216,7 @@ test('regional, provincial, NCR and isolated city paths and labels match legacy 
   // The legacy municipality deep-link bug prevents using a fresh city URL as
   // a reference. Reach Bacolod through its province, then compare its view.
   if (await baseline.locator('#detail-close').isVisible()) await baseline.locator('#detail-close').click();
-  await baseline.locator('text.huc-label').filter({ hasText: 'City of Bacolod' }).click();
+  await selectSvgLabel(baseline, 'text.huc-label');
   await page.goto('/#/region/1800000000/province/604500000/municity/630200000');
   await ready(page, '#/region/1800000000/province/604500000/municity/630200000');
   await expect(baseline.locator('svg path')).toHaveCount(1);

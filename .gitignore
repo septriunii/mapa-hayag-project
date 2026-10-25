@@ -6,3 +6,5 @@ react-app/test-results/
 react-app/playwright-report/
 .vercel/
 .env*.local
+.playwright-browsers/
+react-app/performance-results/
