@@ -26,10 +26,10 @@ describe('configuration compatibility', () => {
     expect(normalizePsgc(604500000)).not.toBe(normalizePsgc(1804500000));
     expect(() => normalizePsgc('0')).toThrow();
   });
-  it('matches records, clamps colors, and supplies the baseline missing-data color', () => {
+  it('matches records, clamps colors, and supplies the semantic missing-data color', () => {
     const input = { colorField: 'value', colorDomain: [0, 100], colorScheme: 'interpolateBlues', data: { region: [{ psgc: 100, value: 100 }, { psgc: 200, value: 999 }] } };
     const color = createColorLookup(parseConfig(input));
     expect(color('region', '0000000100')).toBe(color('region', 200));
-    expect(color('region', 300)).toBe('#2d3a5a');
+    expect(color('region', 300)).toBe('var(--color-land)');
   });
 });

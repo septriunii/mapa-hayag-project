@@ -10,6 +10,6 @@ export function createColorLookup(config: MapConfig) {
   const scale = colorDomain && colorScheme ? scaleSequential(interpolators[colorScheme]).domain(colorDomain).clamp(true) : undefined;
   return (level: GeographicLevel, code: SourcePsgc) => {
     const value = colorField ? records[level].get(normalizePsgc(code))?.[colorField] : undefined;
-    return scale && typeof value === 'number' ? scale(value) : '#2d3a5a';
+    return scale && typeof value === 'number' ? scale(value) : 'var(--color-land)';
   };
 }

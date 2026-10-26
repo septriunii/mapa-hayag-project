@@ -9,7 +9,7 @@ test('production preview preserves national paths, dark UI, drawer, and selectio
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
   await expect(page).toHaveTitle('MAPAhayag project');
-  await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(26, 26, 46)');
+  await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(12, 27, 48)');
   await expect(page.locator('#theme-btn')).toHaveCount(0);
   const drawer = page.getByRole('complementary');
   expect((await drawer.boundingBox())?.x).toBeCloseTo(0);
@@ -94,7 +94,7 @@ test('renders configuration HTML literally and rejects invalid alignment', async
   await expect(page.getByRole('alert')).toBeVisible();
 });
 
-test('matches the baseline welcome drawer geometry and text styling', async ({ page, context }) => {
+test('matches the baseline welcome drawer geometry and typography with the approved new palette', async ({ page, context }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto('/');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
@@ -114,7 +114,8 @@ test('matches the baseline welcome drawer geometry and text styling', async ({ p
     canvas.font = `${style.fontStyle} ${style.fontWeight} ${style.fontSize} ${style.fontFamily}`;
     const directText = [...element.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).map(node => node.textContent?.trim() ?? '').join('');
     const textWidth = directText ? canvas.measureText(directText).width : undefined;
-    return { id, x: box.x, y: box.y, width: box.width, height: box.height, textWidth, size: style.fontSize, lineHeight: style.lineHeight, color: directText ? style.color : undefined, bg: style.backgroundColor };
+    // Colors intentionally follow Figma now; theme.spec.ts checks those exactly.
+    return { id, x: box.x, y: box.y, width: box.width, height: box.height, textWidth, size: style.fontSize, lineHeight: style.lineHeight };
   });
   expect(await page.evaluate(snapshot)).toEqual(await baseline.evaluate(snapshot));
   await baseline.close();

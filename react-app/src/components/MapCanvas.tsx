@@ -10,13 +10,13 @@ import type { MapView } from '../navigation/view';
 import { formatRoute } from '../navigation/routes';
 import { useViewport } from '../hooks/useViewport';
 
-interface Props { view: MapView; config: MapConfig; onSelect: (feature: GeographicFeature) => void; busy: boolean }
+interface Props { view: MapView; config: MapConfig; onSelect: (feature: GeographicFeature) => void; busy: boolean; selected?: { view: MapView; code: string } }
 
 function viewPath(view: MapView, width: number, height: number) {
   return makePath(width, height, view.route.level === 'national' ? undefined : paddedBounds(view.collection.features, view.route.level === 'municity'));
 }
 
-export function MapCanvas({ view, config, onSelect, busy }: Props) {
+export function MapCanvas({ view, config, onSelect, busy, selected }: Props) {
   const svg = useRef<SVGSVGElement>(null);
   const behavior = useRef<ZoomBehavior<SVGSVGElement, unknown>>(null);
   const { width, height } = useViewport();
@@ -74,28 +74,29 @@ export function MapCanvas({ view, config, onSelect, busy }: Props) {
   return <svg ref={svg} aria-label={displayed.route.level === 'national' ? 'Philippines national map' : `${displayed.details?.name} map`}
     aria-busy={disabled} data-view={formatRoute(displayed.route)} viewBox={`0 0 ${width} ${height}`} className="block h-full w-full touch-none cursor-grab active:cursor-grabbing">
     <g key={formatRoute(displayed.route)} transform={transform.toString()} opacity={opacity} className={disabled ? 'pointer-events-none' : undefined}>
-      <GeographicLayer view={displayed} config={config} onSelect={onSelect} disabled={disabled} width={width} height={height} />
+      <GeographicLayer view={displayed} config={config} onSelect={onSelect} selected={selected} disabled={disabled} width={width} height={height} />
     </g>
   </svg>;
 }
 
-const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, disabled, width, height }: Omit<Props, 'busy'> & { disabled: boolean; width: number; height: number }) {
+const GeographicLayer = memo(function GeographicLayer({ view, config, onSelect, selected, disabled, width, height }: Omit<Props, 'busy'> & { disabled: boolean; width: number; height: number }) {
   const path = useMemo(() => viewPath(view, width, height), [view, width, height]);
   const color = useMemo(() => createColorLookup(config), [config]);
-  const shapes = useMemo(() => view.collection.features.map(feature => ({ feature, code: featureCode(feature, view.level), d: path(feature) ?? '', centroid: path.centroid(feature) })), [view, path]);
+  const shapes = useMemo(() => view.collection.features.map(feature => ({ feature, code: featureCode(feature, view.level), d: path(feature) ?? '', centroid: path.centroid(feature), fill: color(view.level, featureCode(feature, view.level)) })), [view, path, color]);
   const fontSize = view.route.level === 'national' ? 10 : view.route.level === 'region' ? 9 : view.route.level === 'province' ? 8 : 13;
   const strokeWidth = view.level === 'region' ? 0.8 : view.level === 'province' ? 0.5 : 0.3;
   return <>
-    {view.background?.features.map((feature, index) => <path key={index} className="region-bg pointer-events-none" d={path(feature) ?? ''} fill="#2d3a5a" stroke="none" />)}
-    {shapes.map(({ feature, code, d }) => <path key={code} data-psgc={code} d={d}
-      fill={color(view.level, code)} stroke="#000" strokeWidth={strokeWidth} role="button" tabIndex={disabled ? -1 : 0} aria-label={feature.properties[nameProperty[view.level]] ?? code}
+    {view.background?.features.map((feature, index) => <path key={index} className="region-bg pointer-events-none" d={path(feature) ?? ''} fill="var(--color-land)" stroke="none" />)}
+    {shapes.map(({ feature, code, d, fill }) => <path key={code} data-psgc={code} d={d} data-choropleth={fill !== 'var(--color-land)' || undefined}
+      fill={fill} stroke="var(--color-geographic-border)" strokeWidth={strokeWidth} role="button" tabIndex={disabled ? -1 : 0} aria-label={feature.properties[nameProperty[view.level]] ?? code}
+      aria-pressed={(selected?.view === view && selected.code === code) || (view.route.level === 'municity' && view.route.municity === code)}
       onClick={event => { if (!disabled && !event.defaultPrevented) onSelect(feature); }} onKeyDown={event => { if (!disabled && (event.key === 'Enter' || event.key === ' ')) { event.preventDefault(); onSelect(feature); } }}
-      className={`motion-safe:animate-map-shapes cursor-pointer hover:stroke-white hover:opacity-80 focus-visible:stroke-white focus-visible:outline-none ${view.level === 'region' ? 'hover:stroke-[1.5]' : view.level === 'province' ? 'hover:stroke-[1]' : 'hover:stroke-[0.8]'}`} />)}
+      className={`map-feature motion-safe:animate-map-shapes cursor-pointer focus-visible:outline-none ${view.level === 'region' ? '[--map-active-stroke:1.5]' : view.level === 'province' ? '[--map-active-stroke:1]' : '[--map-active-stroke:0.8]'}`} />)}
     {shapes.filter(({ centroid }) => centroid.every(Number.isFinite)).map(({ feature, code, centroid }) => {
       const name = feature.properties[nameProperty[view.level]] ?? '';
       const label = view.level === 'region' ? name.match(/\(([^)]+)\)/)?.[1] ?? name : view.route.level === 'province' ? name : name.length > 20 ? name.slice(0, 18) + '…' : name;
       const clickable = view.route.level === 'province';
-      return <text key={code} data-label-psgc={code} x={centroid[0]} y={centroid[1]} textAnchor="middle" dominantBaseline="middle" fill="white"
+      return <text key={code} data-label-psgc={code} x={centroid[0]} y={centroid[1]} textAnchor="middle" dominantBaseline="middle" fill="var(--color-map-label)"
         fontSize={fontSize} fontFamily="monospace" fontWeight="700" letterSpacing="0.3" className={`motion-safe:animate-map-labels ${clickable ? 'cursor-pointer' : 'pointer-events-none'}`}
         onClick={clickable ? () => { if (!disabled) onSelect(feature); } : undefined}>{label}</text>;
     })}
