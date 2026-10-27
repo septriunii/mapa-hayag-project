@@ -8,3 +8,4 @@ react-app/playwright-report/
 .env*.local
 .playwright-browsers/
 react-app/performance-results/
+react-app/theme-results/

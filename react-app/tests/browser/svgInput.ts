@@ -12,7 +12,8 @@ export async function selectSvgLabel(page: Page, selector: string, touch = false
     // of the requested text, rather than the neighboring label over its center.
     for (const fy of [0.5, 0.25, 0.75]) for (const fx of [0.5, 0.25, 0.75, 0.1, 0.9]) {
       const x = box.x + box.width * fx, y = box.y + box.height * fy;
-      if (document.elementFromPoint(x, y) === element) return { x, y };
+      const hit = document.elementFromPoint(x, y);
+      if (hit && (hit === element || element.contains(hit))) return { x, y };
     }
     throw new Error('SVG label is fully obscured');
   });

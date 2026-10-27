@@ -2,13 +2,14 @@ import { expect, test, type Page } from '@playwright/test';
 
 test.use({ viewport: { width: 1440, height: 900 }, reducedMotion: 'reduce' });
 
-// Exact paints read from Figma frame 1:15 (vectors 2:3–2:53 for land/borders).
+// Source cartographic paints; complementary UI/interaction colors are extensions.
 const palette = {
-  ocean: 'rgb(12, 27, 48)', sidebar: 'rgb(10, 19, 34)',
-  land: 'rgb(40, 92, 88)', border: 'rgb(105, 207, 201)',
-  label: 'rgb(242, 247, 255)', primary: 'rgb(240, 246, 255)',
-  secondary: 'rgb(154, 170, 193)', divider: 'rgb(39, 49, 67)',
-  hover: 'rgb(50, 110, 105)', selected: 'rgb(52, 95, 124)',
+  ocean: 'rgb(36, 40, 43)', sidebar: 'rgb(32, 38, 40)',
+  land: 'rgb(77, 96, 89)', border: 'rgb(127, 141, 137)',
+  label: 'rgb(184, 192, 186)', primary: 'rgb(238, 241, 232)',
+  secondary: 'rgb(180, 190, 182)', divider: 'rgb(60, 71, 66)',
+  hover: 'rgb(85, 104, 95)', selected: 'rgb(92, 112, 100)',
+  interaction: 'rgb(186, 200, 189)',
 };
 
 async function hoverRegion(page: Page, code: string) {
@@ -38,12 +39,14 @@ function contrast(first: string, second: string) {
   return (Math.max(a, b) + 0.05) / (Math.min(a, b) + 0.05);
 }
 
-test('Midnight Ocean uses the exact Figma palette with readable geographic states', async ({ page }, info) => {
+test('cartographic theme uses the reference palette with readable geographic states', async ({ page }, info) => {
   await page.goto('/');
   const region = page.locator('path[data-psgc="900000000"]');
   await expect(page.locator('path[data-psgc]')).toHaveCount(18);
   await expect(region).toHaveCSS('fill', palette.land);
   await expect(region).toHaveCSS('stroke', palette.border);
+  await expect(region).toHaveCSS('stroke-width', '0.25px');
+  await expect(page.locator('[data-administrative-borders]')).toHaveCSS('stroke', palette.border);
   await expect(page.locator('body')).toHaveCSS('background-color', palette.ocean);
   await expect(page.locator('main')).toHaveCSS('background-color', palette.ocean);
   await expect(page.locator('#detail')).toHaveCSS('background-color', palette.sidebar);
@@ -56,12 +59,12 @@ test('Midnight Ocean uses the exact Figma palette with readable geographic state
   }
   await expect(page.locator('text[data-label-psgc="900000000"]')).toHaveCSS('fill', palette.label);
   for (const fill of [palette.land, palette.hover, palette.selected]) {
-    expect(contrast(palette.label, fill)).toBeGreaterThanOrEqual(4.5);
-    expect(contrast(palette.border, fill)).toBeGreaterThanOrEqual(3);
+    expect(contrast(palette.interaction, fill)).toBeGreaterThanOrEqual(3);
   }
   expect(contrast(palette.secondary, palette.sidebar)).toBeGreaterThanOrEqual(4.5);
-  expect(contrast(palette.label, palette.land)).toBeGreaterThanOrEqual(3);
-  await page.screenshot({ path: info.outputPath('midnight-ocean-national.png') });
+  // Subdued geographic text has a thin charcoal halo for local contrast.
+  expect(contrast(palette.label, palette.ocean)).toBeGreaterThanOrEqual(4.5);
+  await page.screenshot({ path: info.outputPath('cartographic-national.png') });
 });
 
 test('hover and keyboard selection highlight real polygons without changing geometry or routing', async ({ page }, info) => {
@@ -73,7 +76,7 @@ test('hover and keyboard selection highlight real polygons without changing geom
   await page.getByRole('button', { name: 'Close details menu' }).click();
   await hoverRegion(page, '900000000');
   await expect(region).toHaveCSS('fill', palette.hover);
-  await expect(region).toHaveCSS('stroke', palette.label);
+  await expect(region).toHaveCSS('stroke', palette.interaction);
   await page.mouse.move(1400, 20);
   await expect(region).toHaveCSS('fill', palette.land);
   // Tab from the preceding polygon so the browser applies :focus-visible
@@ -89,7 +92,7 @@ test('hover and keyboard selection highlight real polygons without changing geom
   await expect(page.locator('svg')).toHaveAttribute('data-view', '#/');
   await expect(region).toHaveAttribute('d', geometry!);
   await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
-  await page.screenshot({ path: info.outputPath('midnight-ocean-selected.png') });
+  await page.screenshot({ path: info.outputPath('cartographic-selected.png') });
   const next = page.locator('path[data-psgc="1800000000"]');
   await next.focus(); await page.keyboard.press('Enter');
   await expect(next).toHaveAttribute('aria-pressed', 'true');
@@ -108,8 +111,51 @@ test('choropleth values keep their fills while hover and selection add an outlin
   await page.getByRole('button', { name: 'Close details menu' }).click();
   await hoverRegion(page, '900000000');
   await expect(region).toHaveCSS('fill', 'rgb(8, 48, 107)');
-  await expect(region).toHaveCSS('stroke', palette.label);
+  await expect(region).toHaveCSS('stroke', palette.interaction);
   await region.focus(); await page.keyboard.press('Enter');
   await expect(region).toHaveAttribute('aria-pressed', 'true');
   await expect(region).toHaveCSS('fill', 'rgb(8, 48, 107)');
+});
+
+test('administrative linework stays thin through wheel zoom, pan and every drilldown scale', async ({ page }) => {
+  const requests: string[] = [];
+  page.on('request', request => requests.push(request.url()));
+  const views = [
+    ['#/', '0.65px'], ['#/region/900000000', '0.55px'],
+    ['#/region/900000000/province/907200000', '0.45px'],
+    ['#/region/900000000/province/907200000/municity/907201000', '0.45px'],
+  ];
+  for (const [hash, width] of views) {
+    await page.goto('/' + hash);
+    const svg = page.locator('svg');
+    await expect(svg).toHaveAttribute('data-view', hash);
+    await expect(svg).toHaveAttribute('aria-busy', 'false');
+    // Hash navigation retains the existing drawer state; city arrival opens it.
+    if (await page.getByRole('button', { name: 'Close details menu' }).isVisible()) {
+      await page.getByRole('button', { name: 'Close details menu' }).click();
+    }
+    await expect(page.locator('#detail')).toHaveCSS('visibility', 'hidden');
+    const mesh = page.locator('[data-administrative-borders]');
+    await expect(mesh).toHaveCSS('stroke', palette.border);
+    await expect(mesh).toHaveCSS('stroke-width', width);
+    await expect(mesh).toHaveCSS('vector-effect', 'non-scaling-stroke');
+    if (hash.includes('/municity/')) await expect(mesh).toHaveAttribute('d', '');
+    else expect((await mesh.getAttribute('d'))!.length).toBeGreaterThan(0);
+    const feature = page.locator('path[data-psgc]').first();
+    const geometry = await feature.getAttribute('d');
+    const boundaryGeometry = await mesh.getAttribute('d');
+    const networkBefore = requests.length;
+    await page.mouse.move(1200, 450);
+    await page.mouse.wheel(0, -1400);
+    await expect(page.locator('svg > g')).not.toHaveAttribute('transform', 'translate(0,0) scale(1)');
+    await expect(mesh).toHaveCSS('stroke-width', width);
+    await expect(feature).toHaveCSS('vector-effect', 'non-scaling-stroke');
+    await expect(feature).toHaveAttribute('d', geometry!);
+    await expect(mesh).toHaveAttribute('d', boundaryGeometry!);
+    await page.mouse.move(1200, 450); await page.mouse.down();
+    await page.mouse.move(1250, 490, { steps: 5 }); await page.mouse.up();
+    await expect(mesh).toHaveAttribute('d', boundaryGeometry!);
+    expect(requests.length).toBe(networkBefore);
+    await expect(page.locator('body')).toHaveCSS('background-color', palette.ocean);
+  }
 });

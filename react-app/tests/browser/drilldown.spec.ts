@@ -192,7 +192,7 @@ test('city zoom, responsive deep links and safe metric details work together', a
   await expect(page.locator('svg > g')).toHaveAttribute('transform', 'translate(0,0) scale(1)');
 });
 
-test('regional, provincial, NCR and isolated city paths and labels match legacy rendering', async ({ page, context }) => {
+test('regional, provincial, NCR and isolated city paths match legacy rendering', async ({ page, context }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   const baseline = await context.newPage();
   await baseline.setViewportSize({ width: 1440, height: 900 });
@@ -200,7 +200,8 @@ test('regional, provincial, NCR and isolated city paths and labels match legacy 
   await baseline.route('https://unpkg.com/d3@7/dist/d3.min.js', route => route.fulfill({ contentType: 'text/javascript', body: readFileSync('node_modules/d3/dist/d3.min.js', 'utf8') }));
   const snapshot = () => ({
     paths: Array.from(document.querySelectorAll('svg path[data-psgc], svg path.province, svg path.municity, svg path.huc-city')).map(element => element.getAttribute('d')).sort(),
-    labels: Array.from(document.querySelectorAll('svg text')).map(element => ({ name: element.textContent, x: element.getAttribute('x'), y: element.getAttribute('y'), size: element.getAttribute('font-size') })).sort((a, b) => (a.name ?? '').localeCompare(b.name ?? '')),
+    // Label positions/type are intentionally redesigned; typography.spec.ts
+    // checks source names, interaction, placement and fixed screen sizes.
   });
   for (const hash of ['#/region/900000000', '#/region/900000000/province/907200000', '#/region/1300000000', '#/region/1800000000/province/604500000']) {
     await page.goto('/' + hash);

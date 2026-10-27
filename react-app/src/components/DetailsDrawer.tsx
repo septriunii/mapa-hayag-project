@@ -17,10 +17,10 @@ export function DetailsDrawer({ open, config, onClose, selection }: Props) {
   const rows = selection?.record ? config.detailFields.filter(field => selection.record?.[field.key] != null) : [];
   return (
     <div ref={drawer} id="detail" role="complementary" aria-label="Location details" inert={!open}
-      className={`fixed inset-y-0 left-0 z-20 flex w-[min(360px,100%)] flex-col overflow-hidden border-r border-divider bg-panel text-text-primary transition-[transform,visibility] duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${open ? 'visible [transform:translateX(0)]' : 'invisible [transform:translateX(-100%)]'}`}>
+      className={`fixed inset-y-0 left-0 z-20 flex w-[min(360px,100%)] flex-col overflow-hidden border-r border-divider bg-panel font-ui text-text-primary transition-[transform,visibility] duration-350 ease-[cubic-bezier(0.4,0,0.2,1)] ${open ? 'visible [transform:translateX(0)]' : 'invisible [transform:translateX(-100%)]'}`}>
       <div id="detail-header" className="shrink-0 border-b border-divider px-5 pt-4 pb-3.5">
         <div id="detail-header-row" className="mb-2.5 flex items-center justify-between">
-          <div id="detail-eyebrow" className="mb-1.5 font-mono text-[10px] leading-none tracking-[1.5px] text-text-secondary uppercase">{selection?.typeLabel ?? config.title}</div>
+          <div id="detail-eyebrow" className="mb-1.5 text-[10px] leading-none tracking-[1.5px] text-text-secondary uppercase">{selection?.typeLabel ?? config.title}</div>
           <button id="detail-close" type="button" aria-label="Close details menu" onClick={onClose} className="cursor-pointer border-0 bg-transparent font-[Arial] text-[18px] leading-none text-text-secondary transition-colors hover:text-text-primary">✕</button>
         </div>
         <div id="detail-lgu-name" className="mb-1 text-[22px] leading-[1.2] font-semibold text-text-primary">{selection?.name ?? 'Philippines'}</div>
@@ -29,7 +29,7 @@ export function DetailsDrawer({ open, config, onClose, selection }: Props) {
       <div id="detail-body" className="min-h-0 flex-1 overflow-y-auto px-5 py-4">
         {!selection ? <div className="py-5"><p className="mt-2 text-[12px] leading-[1.8] text-text-primary">{config.description}</p></div>
           : rows.length ? rows.map(field => <div key={field.key} className="flex items-baseline justify-between gap-3 border-b border-divider py-2 last:border-0">
-            <span className="shrink-0 font-mono text-[10px] tracking-[0.8px] text-text-secondary uppercase">{field.label}</span>
+            <span className="shrink-0 text-[10px] tracking-[0.8px] text-text-secondary uppercase">{field.label}</span>
             <span className="text-right text-[13px] text-text-primary">{displayValue(selection.record?.[field.key])}</span>
           </div>) : <div className="py-10 text-center text-[13px] leading-[1.8] text-text-secondary">No data for this area.</div>}
       </div>
