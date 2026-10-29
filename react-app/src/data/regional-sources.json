@@ -1,0 +1,582 @@
+[
+  {
+    "id": "psa-density-revised",
+    "label": "PSA revised density",
+    "title": "Revised population density release — regional Table 3",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/system/files/phcd/PD_Press%20Release_%2004-08-26_0.pdf",
+    "publishedDate": "2026-07-06",
+    "checkedDate": "2026-10-29",
+    "note": "2024 population; 2019 LMB land-area masterlist and MENRE SGA reference. Uses contemporary regional groupings including NIR and Sulu in Region IX. Regional areas do not sum to the approximate national area."
+  },
+  {
+    "id": "nir-act",
+    "label": "RA 12000",
+    "title": "Negros Island Region Act",
+    "publisher": "Supreme Court E-Library",
+    "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97490",
+    "publishedDate": "2024-06-11",
+    "checkedDate": "2026-10-29",
+    "note": "Current three-province NIR; older Western/Central Visayas groupings differ."
+  },
+  {
+    "id": "ncr-psgc-change",
+    "label": "PSA 2023 update",
+    "title": "Third Quarter 2023 PSGC Updates — Makati/Taguig",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/system/files/scd/Press-Release-3Q2023PSGC.pdf",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Ten barangays transferred from Makati to Taguig. Current statistical references do not redraw older city polygons."
+  },
+  {
+    "id": "davao-fruit",
+    "label": "PSA fruit crops",
+    "title": "2024 Fruit Crops Situationer: Davao Region",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://rsso11.psa.gov.ph/content/2024-fruit-crops-situationer-davao-region",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Used for qualitative agricultural context; production totals are not reproduced."
+  },
+  {
+    "id": "bicol-food",
+    "label": "Naga tourism",
+    "title": "Pili in local cuisine",
+    "publisher": "City Government of Naga — Tourism Office",
+    "url": "https://tourism.naga.gov.ph/dining/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Local food example; no regional production statistic."
+  },
+  {
+    "id": "psa-region-01",
+    "label": "PSA regional profile",
+    "title": "Region I (Ilocos Region) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0100000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-01",
+    "label": "NNC regional background",
+    "title": "Region I (Ilocos Region) — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/regional-office-i-profile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-01",
+    "label": "Official regional context",
+    "title": "Region I (Ilocos Region) — economy and cultural context",
+    "publisher": "DOST — Philippine Textile Research Institute",
+    "url": "https://ptri.dost.gov.ph/ilocos-yarn-production-center-to-secure-yarn-supply-for-weavers-in-ilocos-car/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-02",
+    "label": "PSA regional profile",
+    "title": "Region II (Cagayan Valley) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0200000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-02",
+    "label": "CDA regional background",
+    "title": "Region II (Cagayan Valley) — background",
+    "publisher": "Cooperative Development Authority",
+    "url": "https://cda.gov.ph/region-2/profile-of-the-region-2/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-02",
+    "label": "Official regional context",
+    "title": "Region II (Cagayan Valley) — economy and cultural context",
+    "publisher": "National Commission for Culture and the Arts",
+    "url": "https://ncca.gov.ph/about-ncca-3/subcommissions/subcommission-on-cultural-communities-and-traditional-arts-sccta/northern-cultural-communities/cagayan-valley-the-ibanag/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-03",
+    "label": "PSA regional profile",
+    "title": "Region III (Central Luzon) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0300000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-03",
+    "label": "NNC regional background",
+    "title": "Region III (Central Luzon) — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/region-iii-profile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-03",
+    "label": "Official regional context",
+    "title": "Region III (Central Luzon) — economy and cultural context",
+    "publisher": "Department of Economy, Planning, and Development",
+    "url": "https://depdev.gov.ph/wp-content/uploads/2018/02/3-Central-Luzon-RDP-2017-2022.pdf",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-04",
+    "label": "PSA regional profile",
+    "title": "Region IV-A (CALABARZON) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0400000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-04",
+    "label": "DENR regional background",
+    "title": "Region IV-A (CALABARZON) — background",
+    "publisher": "Department of Environment and Natural Resources",
+    "url": "https://calabarzon.denr.gov.ph/regional-profile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-04",
+    "label": "Official regional context",
+    "title": "Region IV-A (CALABARZON) — economy and cultural context",
+    "publisher": "Philippine Information Agency",
+    "url": "https://pia.gov.ph/news/calabarzon-economy-grows-5-1-in-2025/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-05",
+    "label": "PSA regional profile",
+    "title": "Region V (Bicol Region) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0500000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-05",
+    "label": "DEPDev regional background",
+    "title": "Region V (Bicol Region) — background",
+    "publisher": "Department of Economy, Planning, and Development",
+    "url": "https://dro5.depdev.gov.ph/wp-content/uploads/2023/04/rda.pdf",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-05",
+    "label": "Official regional context",
+    "title": "Region V (Bicol Region) — economy and cultural context",
+    "publisher": "Department of Agriculture",
+    "url": "https://bicol.da.gov.ph/exploring-the-potential-of-bicols-pili-nut-as-an-export-product/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-06",
+    "label": "PSA regional profile",
+    "title": "Region VI (Western Visayas) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0600000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-06",
+    "label": "PSA regional composition",
+    "title": "Region VI (Western Visayas) — background",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0600000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-06",
+    "label": "Official regional context",
+    "title": "Region VI (Western Visayas) — economy and cultural context",
+    "publisher": "National Museum of the Philippines",
+    "url": "https://www.nationalmuseum.gov.ph/exhibitions/nm-western-visayas-regional-museum/habol-panay-gallery/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-07",
+    "label": "PSA regional profile",
+    "title": "Region VII (Central Visayas) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0700000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-07",
+    "label": "PSA regional composition",
+    "title": "Region VII (Central Visayas) — background",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0700000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-07",
+    "label": "Official regional context",
+    "title": "Region VII (Central Visayas) — economy and cultural context",
+    "publisher": "Department of Economy, Planning, and Development",
+    "url": "https://dro7.depdev.gov.ph/wp-content/uploads/2026/04/Central-Visayas-RDP-Midterm-Update-v2.pdf",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-08",
+    "label": "PSA regional profile",
+    "title": "Region VIII (Eastern Visayas) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/0800000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-08",
+    "label": "NNC regional background",
+    "title": "Region VIII (Eastern Visayas) — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/nnc-region-viii-profile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "psa-region-10",
+    "label": "PSA regional profile",
+    "title": "Region X (Northern Mindanao) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1000000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-10",
+    "label": "PSA regional composition",
+    "title": "Region X (Northern Mindanao) — background",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1000000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-10",
+    "label": "Official regional context",
+    "title": "Region X (Northern Mindanao) — economy and cultural context",
+    "publisher": "Tourism Promotions Board / Department of Tourism",
+    "url": "https://www.tpb.gov.ph/wp-content/uploads/2023/10/REGION-10.pdf",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-11",
+    "label": "PSA regional profile",
+    "title": "Region XI (Davao Region) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1100000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-11",
+    "label": "CDA regional background",
+    "title": "Region XI (Davao Region) — background",
+    "publisher": "Cooperative Development Authority",
+    "url": "https://cda.gov.ph/region-11/about/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-11",
+    "label": "Official regional context",
+    "title": "Region XI (Davao Region) — economy and cultural context",
+    "publisher": "City Government of Davao",
+    "url": "https://davaocity.gov.ph/tourism/subang-sinugdanan-honors-cultural-convergence-among-11-ethnolinguistic-groups/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-12",
+    "label": "PSA regional profile",
+    "title": "Region XII (SOCCSKSARGEN) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1200000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-12",
+    "label": "NNC historical regional background",
+    "title": "Region XII (SOCCSKSARGEN) — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/nnc-region-xii-profile-2/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-12",
+    "label": "Official regional context",
+    "title": "Region XII (SOCCSKSARGEN) — economy and cultural context",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://rsso12.psa.gov.ph/content/regional-highlights-2024-provincial-product-accounts-soccsksargen",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-13",
+    "label": "PSA regional profile",
+    "title": "National Capital Region (NCR) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1300000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-13",
+    "label": "DENR–EMB metropolitan background",
+    "title": "National Capital Region (NCR) — background",
+    "publisher": "Department of Environment and Natural Resources",
+    "url": "https://ncr.emb.gov.ph/regionalprofile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-13",
+    "label": "Official regional context",
+    "title": "National Capital Region (NCR) — economy and cultural context",
+    "publisher": "Bangsamoro Commission for the Preservation of Cultural Heritage",
+    "url": "https://bcpch.bangsamoro.gov.ph/tagalog/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-14",
+    "label": "PSA regional profile",
+    "title": "Cordillera Administrative Region (CAR) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1400000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-14",
+    "label": "CDA regional background",
+    "title": "Cordillera Administrative Region (CAR) — background",
+    "publisher": "Cooperative Development Authority",
+    "url": "https://cda.gov.ph/region-car/about/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "psa-region-16",
+    "label": "PSA regional profile",
+    "title": "Region XIII (Caraga) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1600000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-16",
+    "label": "NNC regional background",
+    "title": "Region XIII (Caraga) — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/nnc-caraga-region-profile/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "psa-region-17",
+    "label": "PSA regional profile",
+    "title": "MIMAROPA Region — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1700000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-17",
+    "label": "NNC regional background",
+    "title": "MIMAROPA Region — background",
+    "publisher": "National Nutrition Council",
+    "url": "https://nnc.gov.ph/luzon-region/region-iv-b-profile-2/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-17",
+    "label": "Official regional context",
+    "title": "MIMAROPA Region — economy and cultural context",
+    "publisher": "Department of the Interior and Local Government",
+    "url": "https://mimaropa.dilg.gov.ph/about-us/dilg-mimaropa/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-18",
+    "label": "PSA regional profile",
+    "title": "Negros Island Region (NIR) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1800000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-18",
+    "label": "Negros Island Region Act",
+    "title": "Negros Island Region (NIR) — background",
+    "publisher": "Supreme Court E-Library",
+    "url": "https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/97490",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-18",
+    "label": "Official regional context",
+    "title": "Negros Island Region (NIR) — economy and cultural context",
+    "publisher": "Department of Economy, Planning, and Development",
+    "url": "https://nir.depdev.gov.ph/province-of-negros-occidental/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "psa-region-19",
+    "label": "PSA regional profile",
+    "title": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) — population and composition",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://psa.gov.ph/classification/psgc/provinces/1900000000",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Population is the 2024 POPCEN under current grouping. Administrative counts cross-checked against the 30 September 2026 PSGC summary; older composition captions are not the count reference date."
+  },
+  {
+    "id": "background-19",
+    "label": "Bangsamoro Organic Law",
+    "title": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) — background",
+    "publisher": "Supreme Court E-Library",
+    "url": "https://elibrary.judiciary.gov.ph//thebookshelf//showdocs/2/92699",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Background prose only. Older population, administrative counts, area estimates and projections in background pages are not used. Some official pages are available through indexed text while direct access is restricted."
+  },
+  {
+    "id": "context-19",
+    "label": "Official regional context",
+    "title": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM) — economy and cultural context",
+    "publisher": "Bangsamoro Commission for the Preservation of Cultural Heritage",
+    "url": "https://bcpch.bangsamoro.gov.ph/school-of-living-traditions/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative examples only; not an exhaustive account of regional communities or an assertion of current economic shares."
+  },
+  {
+    "id": "culture-04",
+    "label": "Official cultural context",
+    "title": "Regional heritage and development — 04",
+    "publisher": "Philippine News Agency",
+    "url": "https://www.pna.gov.ph/articles/1077986",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Specific cultural or development example; no numerical economic ranking is reproduced."
+  },
+  {
+    "id": "culture-07",
+    "label": "Official cultural context",
+    "title": "Regional heritage and development — 07",
+    "publisher": "National Museum of the Philippines",
+    "url": "https://www.nationalmuseum.gov.ph/karaang-sugbo-ug-ang-kabiling-bahandi/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Specific cultural or development example; no numerical economic ranking is reproduced."
+  },
+  {
+    "id": "culture-12",
+    "label": "Official cultural context",
+    "title": "Regional heritage and development — 12",
+    "publisher": "Department of Economy, Planning, and Development",
+    "url": "https://dro12.depdev.gov.ph/soccsksargens-economy-grows-by-4-8-percent-in-2025/",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Specific cultural or development example; no numerical economic ranking is reproduced."
+  },
+  {
+    "id": "ilocos-tourism",
+    "label": "DOT / PIA",
+    "title": "Ilocos tourism promotes experiential, sustainable travel",
+    "publisher": "Philippine Information Agency",
+    "url": "https://pia.gov.ph/news/ilocos-tourism-promotes-experiential-sustainable-travel",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Official reporting of DOT's cultural and experiential tourism examples."
+  },
+  {
+    "id": "northern-economy",
+    "label": "PSA regional accounts",
+    "title": "Northern Mindanao's economy in 2024",
+    "publisher": "Philippine Statistics Authority",
+    "url": "https://rsso10.psa.gov.ph/content/northern-mindanaos-economy-surpasses-trillion-peso-mark-grows-60-percent-2024",
+    "publishedDate": null,
+    "checkedDate": "2026-10-29",
+    "note": "Qualitative sector context; no economic total or share is reproduced."
+  }
+]

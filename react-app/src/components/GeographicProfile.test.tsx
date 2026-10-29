@@ -1,19 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import profiles from '../data/geographic-profiles.json';
 import sources from '../data/geographic-sources.json';
+import regionalSources from '../data/regional-sources.json';
 import { parseProfileCatalog } from '../profiles/schema';
 import { GeographicProfile } from './GeographicProfile';
 import { DetailsDrawer } from './DetailsDrawer';
 import { parseConfig } from '../config/schema';
 import { normalizePsgc } from '../geography/psgc';
 
-const catalog = parseProfileCatalog(profiles, sources);
+const catalog = parseProfileCatalog(profiles, [...sources, ...regionalSources]);
 const profile = catalog.profiles.get('region:0900000000')!;
-it('shows dated statistics, explicit missing values, Sulu notice and safe official links', () => {
+it('shows dated statistics, revised density, Sulu notice and safe official links', () => {
   render(<GeographicProfile profile={profile} sources={catalog.sources} />);
   expect(screen.getByText('5,089,934')).toBeInTheDocument();
   expect(screen.getByText('0900000000')).toBeInTheDocument();
-  expect(screen.getAllByText('Data unavailable')).toHaveLength(2);
+  expect(screen.getByText('18,291.44')).toBeInTheDocument();
+  expect(screen.getByText('278')).toBeInTheDocument();
   expect(screen.getByRole('complementary', { name: 'Administrative boundary notice' })).toHaveTextContent('does not include Sulu');
   expect(screen.getByRole('heading', { name: 'Sources and Data Notes' })).toBeInTheDocument();
   expect(screen.getAllByText('As of', { exact: false }).length).toBeGreaterThan(0);
@@ -21,6 +23,13 @@ it('shows dated statistics, explicit missing values, Sulu notice and safe offici
     expect(link.getAttribute('href')).toMatch(/^https:\/\//);
     expect(link).toHaveAttribute('rel', 'noopener noreferrer');
   }
+});
+
+it('retains unavailable-value rendering for future source gaps', () => {
+  const missing = structuredClone(profile);
+  Object.assign(missing.metrics[6], { value: null, status: 'unavailable', referenceDate: null, sourceIds: [], note: 'Compatible source pending verification.' });
+  render(<GeographicProfile profile={missing} sources={catalog.sources} />);
+  expect(screen.getByText('Data unavailable')).toBeInTheDocument();
 });
 
 it('treats profile markup as text and clears old profiles on loading and failure', () => {

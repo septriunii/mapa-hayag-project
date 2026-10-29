@@ -20,6 +20,8 @@ Root data.json is mounted read-only in development. geoBasePath resolves relativ
 
 ## Checks
 
+The local regional expansion now covers all 18 displayed regions with the existing sidebar design. See [regional profile verification and local review](../docs/migration/REGIONAL-PROFILES.md). It is awaiting local review and has not been pushed or deployed.
+
 The local geographic-profile pilot adds source-attributed sidebar content for the Philippines and Region IX only. See the [profile data, verification notes and future-region template](../docs/migration/GEOGRAPHIC-PROFILES.md). Region IX statistics include Sulu, while its existing map geometry does not; the sidebar explains that difference. This pilot has not been pushed or deployed.
 
 ```sh

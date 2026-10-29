@@ -11,7 +11,7 @@ test('production preview preserves national paths, dark UI, drawer, and selectio
   await expect(page).toHaveTitle('MAPAhayag project');
   await expect(page.locator('body')).toHaveCSS('background-color', 'rgb(36, 40, 43)');
   await expect(page.locator('#theme-btn')).toHaveCount(0);
-  const drawer = page.getByRole('complementary');
+  const drawer = page.getByRole('complementary', { name: 'Location details', exact: true });
   expect((await drawer.boundingBox())?.x).toBeCloseTo(0);
   expect((await drawer.boundingBox())?.width).toBe(360);
   await page.getByRole('button', { name: 'Close details menu' }).click();

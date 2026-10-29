@@ -1,0 +1,2713 @@
+[
+  {
+    "key": "region:0100000000",
+    "level": "region",
+    "psgc": "0100000000",
+    "name": "Region I (Ilocos Region)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 5342453,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-01"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 4,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-01",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 9,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-01",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 116,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-01",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 3267,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-01",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0100000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-01"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 12830.62,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 416,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Ilocos occupies northwestern Luzon, between the Cordillera highlands and the western coast. Its coastal plains include the shores of Lingayen Gulf.",
+            "sourceIds": [
+              "background-01",
+              "psa-region-01"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Ilocos Norte, Ilocos Sur, La Union and Pangasinan form the region. Their provincial and local governments retain distinct responsibilities within this regional grouping.",
+            "sourceIds": [
+              "background-01",
+              "psa-region-01"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Tourism and craft livelihoods include abel weaving, pottery and food traditions. DOST's work with Ilocos weavers connects the region's textile heritage with contemporary production.",
+            "sourceIds": [
+              "context-01",
+              "ilocos-tourism"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-01",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0200000000",
+    "level": "region",
+    "psgc": "0200000000",
+    "name": "Region II (Cagayan Valley)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 3777608,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-02"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-02",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 4,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-02",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 89,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-02",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 2311,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-02",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0200000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-02"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 30986.61,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 122,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Cagayan Valley occupies northeastern Luzon, framed by the Cordillera, Sierra Madre and Caraballo mountains. The Cagayan River crosses its valley; Batanes extends the region into the islands to the north.",
+            "sourceIds": [
+              "background-02",
+              "psa-region-02",
+              "background-02"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "The region comprises Batanes, Cagayan, Isabela, Nueva Vizcaya and Quirino. The current PSA grouping brings island, valley and mountain provinces into one statistical region.",
+            "sourceIds": [
+              "background-02",
+              "psa-region-02"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture is an important part of the valley's economy. Its cultural landscape includes Ibanag traditions documented by NCCA, alongside other communities whose languages and histories differ across the region.",
+            "sourceIds": [
+              "context-02",
+              "background-02"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-02",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0300000000",
+    "level": "region",
+    "psgc": "0300000000",
+    "name": "Region III (Central Luzon)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 12989074,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-03"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 7,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-03",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 15,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-03",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 115,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-03",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 3105,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-03",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0300000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-03"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 22648.03,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 574,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Central Luzon lies between northern Luzon and Metro Manila. Its central plains, surrounding mountain ranges and coasts connect farming areas with urban and industrial centers.",
+            "sourceIds": [
+              "background-03",
+              "psa-region-03"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Aurora, Bataan, Bulacan, Nueva Ecija, Pampanga, Tarlac and Zambales make up the region. Aurora's transfer to Region III forms part of the administrative reorganization described by government regional profiles.",
+            "sourceIds": [
+              "background-03",
+              "psa-region-03"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Rice farming, fisheries and the Clark and Subic economic zones illustrate its varied economy. The region's cultural communities include Ayta, Sambal, Kapampangan and Tagalog peoples; these are examples rather than an exhaustive list.",
+            "sourceIds": [
+              "context-03",
+              "background-03"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-03",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0400000000",
+    "level": "region",
+    "psgc": "0400000000",
+    "name": "Region IV-A (CALABARZON)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 16933234,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-04"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-04",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 22,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-04",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 120,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-04",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 3992,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-04",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0400000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-04"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 15470.23,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 1095,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "CALABARZON lies south and east of Metro Manila in southwestern Luzon. Its provinces connect densely urbanized areas with agricultural landscapes and coastlines.",
+            "sourceIds": [
+              "background-04",
+              "psa-region-04"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Its name combines Cavite, Laguna, Batangas, Rizal and Quezon. Executive Order 103 of 17 May 2002 divided the former Southern Tagalog region into IV-A and IV-B and transferred Aurora to Central Luzon.",
+            "sourceIds": [
+              "background-04",
+              "psa-region-04"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Manufacturing is a major regional activity, accompanied by services and agriculture. Its proximity to Metro Manila and its industrial and economic centers have shaped urban growth and migration.",
+            "sourceIds": [
+              "context-04"
+            ]
+          },
+          {
+            "text": "Tagalog language heritage is reflected in museum and history programs in Laguna.",
+            "sourceIds": [
+              "culture-04"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-04",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0500000000",
+    "level": "region",
+    "psgc": "0500000000",
+    "name": "Region V (Bicol Region)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 6064426,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-05"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 6,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-05",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 7,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-05",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 107,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-05",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 3471,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-05",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0500000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-05"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 18007.22,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 337,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Bicol's mainland provinces and the island provinces of Catanduanes and Masbate form a region of mountains, coasts and islands. Mayon in Albay is one of its best-known landscapes.",
+            "sourceIds": [
+              "background-05",
+              "psa-region-05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Albay, Camarines Norte, Camarines Sur, Catanduanes, Masbate and Sorsogon form the current PSA region. The statistics below describe that six-province grouping.",
+            "sourceIds": [
+              "background-05",
+              "psa-region-05"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Pili cultivation and processing link agriculture with local food traditions and enterprise. DA Bicol documents work on pili production, while Naga's tourism office highlights pili in the area's cuisine.",
+            "sourceIds": [
+              "context-05",
+              "bicol-food"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-05",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0600000000",
+    "level": "region",
+    "psgc": "0600000000",
+    "name": "Region VI (Western Visayas)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 4861911,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-06"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-06",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 3,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-06",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 98,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-06",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 3389,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-06",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0600000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-06"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 12641.59,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 385,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [
+      {
+        "title": "Administrative boundary notice",
+        "text": "These figures use the current NIR arrangement under RA 12000: Negros Occidental and Bacolod, Negros Oriental and Siquijor belong to NIR. When legacy alignment is selected, Western Visayas includes Negros Occidental and Central Visayas includes Negros Oriental and Siquijor. The current statistics are not totals for those legacy polygons; the map keeps its original identifiers.",
+        "sourceIds": [
+          "nir-act",
+          "psa-region-06"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Current Western Visayas comprises Aklan, Antique, Capiz and Iloilo on Panay, together with Guimaras. Negros Occidental and Bacolod are now part of the Negros Island Region.",
+            "sourceIds": [
+              "background-06",
+              "psa-region-06"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Republic Act 12000 established NIR in 2024. Contemporary PSA figures for Western Visayas therefore use a different grouping from the older six-province region shown when legacy alignment is selected.",
+            "sourceIds": [
+              "background-06",
+              "psa-region-06",
+              "nir-act"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Panay's textile traditions include hablon weaving in Iloilo and Antique, piña-seda weaving in Aklan and Antique, and Panay Bukidnon embroidery. These crafts connect cultural knowledge with local livelihoods.",
+            "sourceIds": [
+              "context-06"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-06",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0700000000",
+    "level": "region",
+    "psgc": "0700000000",
+    "name": "Region VII (Central Visayas)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 6640875,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-07"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 2,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-07",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 10,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-07",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 91,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-07",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 2312,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-07",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0700000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-07"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 8975.04,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 740,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [
+      {
+        "title": "Administrative boundary notice",
+        "text": "These figures use the current NIR arrangement under RA 12000: Negros Occidental and Bacolod, Negros Oriental and Siquijor belong to NIR. When legacy alignment is selected, Western Visayas includes Negros Occidental and Central Visayas includes Negros Oriental and Siquijor. The current statistics are not totals for those legacy polygons; the map keeps its original identifiers.",
+        "sourceIds": [
+          "nir-act",
+          "psa-region-07"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Current Central Visayas comprises Cebu and Bohol and their associated islands. Its urban centers and island landscapes connect manufacturing, shipping and visitor destinations.",
+            "sourceIds": [
+              "background-07",
+              "psa-region-07"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Republic Act 12000 moved Negros Oriental and Siquijor into NIR in 2024. Current statistics describe the remaining Cebu–Bohol grouping, rather than the older four-province region.",
+            "sourceIds": [
+              "background-07",
+              "psa-region-07",
+              "nir-act"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Cebu hosts manufacturing, shipbuilding and IT-enabled business services. Bohol contributes agriculture, fisheries and tourism. The regional development plan describes differing opportunities and service access between these provincial economies.",
+            "sourceIds": [
+              "context-07"
+            ]
+          },
+          {
+            "text": "Cebu's archaeological heritage, documented by the National Museum, includes early settlement, subsistence and burial practices.",
+            "sourceIds": [
+              "culture-07"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-07",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:0800000000",
+    "level": "region",
+    "psgc": "0800000000",
+    "name": "Region VIII (Eastern Visayas)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 4625929,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-08"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 6,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-08",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 7,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-08",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 136,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-08",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 4365,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-08",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "0800000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-08"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 21017.38,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 220,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Eastern Visayas includes Leyte, Samar, Biliran and nearby islands, facing the Pacific to the east. The San Juanico Strait separates Samar and Leyte.",
+            "sourceIds": [
+              "background-08",
+              "psa-region-08"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "The current region comprises Biliran, Eastern Samar, Leyte, Northern Samar, Samar and Southern Leyte. These contemporary statistics are regional references, not new measurements of the displayed boundaries.",
+            "sourceIds": [
+              "background-08",
+              "psa-region-08"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture and fisheries are important livelihoods, including rice, coconut and abaca production. Waray and Cebuano-speaking communities form part of a varied cultural landscape.",
+            "sourceIds": [
+              "background-08"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-08",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1000000000",
+    "level": "region",
+    "psgc": "1000000000",
+    "name": "Region X (Northern Mindanao)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 5178326,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-10"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-10",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 9,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-10",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 84,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-10",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 2022,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-10",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1000000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-10"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 18622.74,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 278,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Northern Mindanao brings together Bukidnon, Camiguin, Lanao del Norte, Misamis Occidental and Misamis Oriental. Its geography spans mainland highlands, coasts and the island of Camiguin.",
+            "sourceIds": [
+              "background-10",
+              "psa-region-10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "PSA lists Cagayan de Oro and Iligan separately from their surrounding provinces in regional statistical tables. Provincial counts should not be interpreted as excluding these cities from the region.",
+            "sourceIds": [
+              "background-10",
+              "psa-region-10"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "The region's economy includes agriculture, forestry and fishing, industry and services. Its tourism background highlights Bukidnon's Indigenous communities, Subanen heritage in Misamis Occidental and Maranao heritage in Lanao del Norte as examples of cultural diversity.",
+            "sourceIds": [
+              "context-10",
+              "northern-economy"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-10",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1100000000",
+    "level": "region",
+    "psgc": "1100000000",
+    "name": "Region XI (Davao Region)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 5389422,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-11"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-11",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 6,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-11",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 43,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-11",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1162,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-11",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1100000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-11"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 21733.04,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 248,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Davao Region occupies southeastern Mindanao around the Davao Gulf. Its present provincial grouping includes Davao de Oro, Davao del Norte, Davao del Sur, Davao Occidental and Davao Oriental.",
+            "sourceIds": [
+              "background-11",
+              "psa-region-11"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "The region was formerly known as Southern Mindanao. Current PSA tables list Davao City separately from Davao del Sur when reporting provincial population, while retaining it within the regional total.",
+            "sourceIds": [
+              "background-11",
+              "psa-region-11"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture includes bananas and other fruit crops. In Davao City, Kadayawan celebrations highlight Indigenous and Moro cultural communities through performances and representations of traditional exchange; this is a local example, not a description of every regional community.",
+            "sourceIds": [
+              "context-11",
+              "davao-fruit"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-11",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1200000000",
+    "level": "region",
+    "psgc": "1200000000",
+    "name": "Region XII (SOCCSKSARGEN)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 4462776,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-12"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 4,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-12",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 4,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-12",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 45,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-12",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1097,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-12",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1200000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-12"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 20262.71,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 220,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "SOCCSKSARGEN lies in south-central Mindanao. Its current provinces are Cotabato, South Cotabato, Sultan Kudarat and Sarangani, with General Santos listed separately in provincial statistical reporting.",
+            "sourceIds": [
+              "background-12",
+              "psa-region-12"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Executive Order 304 of 2004 designated Koronadal as the regional center. Older background pages may still list Cotabato City in Region XII; the current PSA grouping places that city in BARMM.",
+            "sourceIds": [
+              "background-12",
+              "psa-region-12"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture, industry and services all contribute to the regional economy. Provincial product accounts describe General Santos and the four provinces as distinct local economies, with services playing an important role.",
+            "sourceIds": [
+              "context-12"
+            ]
+          },
+          {
+            "text": "Regional planning links agro-industrial development with agricultural, ecological and cultural tourism.",
+            "sourceIds": [
+              "culture-12"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-12",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1300000000",
+    "level": "region",
+    "psgc": "1300000000",
+    "name": "National Capital Region (NCR)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 14001751,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-13"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 0,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-13",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 16,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-13",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 1,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-13",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1715,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-13",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1300000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-13"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 620.61,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 22561,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [
+      {
+        "title": "Administrative boundary notice",
+        "text": "Current PSA city statistics reflect the transfer of ten barangays from Makati to Taguig. The map retains its older city boundaries. Regional totals and current city populations do not update those polygons.",
+        "sourceIds": [
+          "ncr-psgc-change",
+          "psa-region-13"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "The National Capital Region, or Metro Manila, includes the capital City of Manila and surrounding metropolitan local governments. Its landscape includes the Pasig River corridor, coastal lowlands and the Marikina Valley.",
+            "sourceIds": [
+              "background-13",
+              "psa-region-13"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "NCR has no provinces: PSA lists sixteen cities and the municipality of Pateros. The map's direct city/municipality drilldown reflects this distinct administrative arrangement.",
+            "sourceIds": [
+              "background-13",
+              "psa-region-13"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Metro Manila is a national center for commerce, education and the arts. Its communities and cultural institutions reflect migration and exchange across the Philippines.",
+            "sourceIds": [
+              "context-13"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-13",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1400000000",
+    "level": "region",
+    "psgc": "1400000000",
+    "name": "Cordillera Administrative Region (CAR)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 1808985,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-14"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 6,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-14",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 2,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-14",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 75,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-14",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1178,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-14",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1400000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-14"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 21116.05,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 86,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "The Cordillera Administrative Region occupies mountainous north-central Luzon and is landlocked. Its watersheds connect upland landscapes with river systems serving neighboring lowlands.",
+            "sourceIds": [
+              "background-14",
+              "psa-region-14"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Executive Order 220 established CAR on 15 July 1987. The current region comprises Abra, Apayao, Benguet, Ifugao, Kalinga and Mountain Province, with Baguio as its regional center.",
+            "sourceIds": [
+              "background-14",
+              "psa-region-14"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Farming, small-scale production, mining and tourism contribute to livelihoods. Distinct Indigenous traditions and festivals, including Panagbenga in Baguio and Lang-ay in Mountain Province, illustrate the region's cultural variety.",
+            "sourceIds": [
+              "background-14"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-14",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1600000000",
+    "level": "region",
+    "psgc": "1600000000",
+    "name": "Region XIII (Caraga)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 2865196,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-16"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-16",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 6,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-16",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 67,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-16",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1312,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-16",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1600000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-16"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 21820.2,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 131,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "Caraga occupies northeastern Mindanao and nearby islands. Its landscapes include the Agusan river basin, forests, coastal areas and the islands of Surigao del Norte and Dinagat.",
+            "sourceIds": [
+              "background-16",
+              "psa-region-16"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "The current region comprises Agusan del Norte, Agusan del Sur, Surigao del Norte, Surigao del Sur and Dinagat Islands. PSA lists Butuan separately from Agusan del Norte in provincial population reporting.",
+            "sourceIds": [
+              "background-16",
+              "psa-region-16"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture, forest-based activity and mineral resources feature in the region's economic background. Manobo and Mamanwa communities are among its Indigenous peoples; cultural examples do not imply a uniform regional identity.",
+            "sourceIds": [
+              "background-16"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-16",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1700000000",
+    "level": "region",
+    "psgc": "1700000000",
+    "name": "MIMAROPA Region",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 3245446,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-17"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-17",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 2,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-17",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 71,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-17",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1460,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-17",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1700000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-17"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 29063.47,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 112,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "MIMAROPA is an island region comprising Occidental Mindoro, Oriental Mindoro, Marinduque, Romblon and Palawan. Its marine and island landscapes include Apo Reef and the waters around Puerto Galera.",
+            "sourceIds": [
+              "background-17",
+              "psa-region-17"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Republic Act 10879 established the MIMAROPA Region in 2016. Calapan and Puerto Princesa are its two cities; PSA reports Puerto Princesa separately from Palawan in provincial population tables.",
+            "sourceIds": [
+              "background-17",
+              "psa-region-17",
+              "context-17"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Agriculture, fishing and ecotourism feature in the regional economy. Marinduque's Moriones tradition and Mindoro's Mangyan communities are examples of its diverse island cultures.",
+            "sourceIds": [
+              "background-17"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-17",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1800000000",
+    "level": "region",
+    "psgc": "1800000000",
+    "name": "Negros Island Region (NIR)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 4904944,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-18"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 3,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-18",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 19,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-18",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 44,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-18",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 1353,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-18",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1800000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-18"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 13553.48,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 362,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [
+      {
+        "title": "Administrative boundary notice",
+        "text": "These figures use the current NIR arrangement under RA 12000: Negros Occidental and Bacolod, Negros Oriental and Siquijor belong to NIR. When legacy alignment is selected, Western Visayas includes Negros Occidental and Central Visayas includes Negros Oriental and Siquijor. The current statistics are not totals for those legacy polygons; the map keeps its original identifiers.",
+        "sourceIds": [
+          "nir-act",
+          "psa-region-18"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "The Negros Island Region comprises Negros Occidental, including Bacolod, Negros Oriental and Siquijor. The region joins the two Negros provinces with the neighboring island province of Siquijor.",
+            "sourceIds": [
+              "background-18",
+              "psa-region-18"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "Republic Act 12000 of 11 June 2024 established the current NIR. Its statistics use this three-province grouping even where older source maps and identifiers still reflect Western or Central Visayas.",
+            "sourceIds": [
+              "background-18",
+              "psa-region-18",
+              "nir-act"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Negros Occidental's sugar industry is closely connected with its heritage landscapes, including ancestral houses in Silay. Agriculture and heritage tourism are examples of activity within NIR, rather than a complete account of its provincial economies.",
+            "sourceIds": [
+              "context-18"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-18",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  },
+  {
+    "key": "region:1900000000",
+    "level": "region",
+    "psgc": "1900000000",
+    "name": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+    "levelLabel": "Region",
+    "subtitle": "Philippines",
+    "coverage": "Current PSA administrative coverage, excluding Sulu",
+    "checkedDate": "2026-10-29",
+    "metrics": [
+      {
+        "id": "population",
+        "label": "Population",
+        "value": 4545486,
+        "unit": "people",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-region-19"
+        ],
+        "note": "2024 census; not a live estimate."
+      },
+      {
+        "id": "provinces",
+        "label": "Provinces",
+        "value": 5,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-19",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "cities",
+        "label": "Cities",
+        "value": 3,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-19",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "municipalities",
+        "label": "Municipalities",
+        "value": 105,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-19",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "barangays",
+        "label": "Barangays",
+        "value": 2185,
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-19",
+          "psa-psgc"
+        ]
+      },
+      {
+        "id": "psgc",
+        "label": "Region PSGC",
+        "value": "1900000000",
+        "status": "verified",
+        "referenceDate": "2026-09-30",
+        "sourceIds": [
+          "psa-region-19"
+        ]
+      },
+      {
+        "id": "area",
+        "label": "Land area",
+        "value": 14478.08,
+        "unit": "km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "PSA reference area; see data notes."
+      },
+      {
+        "id": "density",
+        "label": "Population density",
+        "value": 314,
+        "unit": "people/km²",
+        "status": "verified",
+        "referenceDate": "2024-07-01",
+        "sourceIds": [
+          "psa-density-revised"
+        ],
+        "note": "Published PSA figure."
+      }
+    ],
+    "notices": [
+      {
+        "title": "Administrative boundary notice",
+        "text": "These current BARMM figures exclude Sulu, which EO 91 assigned to Region IX in 2025. The older map still groups Sulu with BARMM and retains older Maguindanao and Special Geographic Area representations. Current totals must not be treated as totals for the displayed polygons.",
+        "sourceIds": [
+          "psa-region-19",
+          "eo91",
+          "psa-psgc"
+        ]
+      }
+    ],
+    "sections": [
+      {
+        "title": "Geography and Location",
+        "paragraphs": [
+          {
+            "text": "BARMM spans parts of mainland Mindanao and the island provinces of Basilan and Tawi-Tawi. Current PSA statistics also cover the two Maguindanao provinces and Lanao del Sur, while excluding Sulu.",
+            "sourceIds": [
+              "background-19",
+              "psa-region-19"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "History and Administration",
+        "paragraphs": [
+          {
+            "text": "The Bangsamoro Organic Law, Republic Act 11054 of 2018, provided for the autonomous region. Sulu's subsequent exclusion and its 2025 assignment to Region IX mean that older map coverage differs from current statistics.",
+            "sourceIds": [
+              "background-19",
+              "psa-region-19",
+              "eo91"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Economy and Culture",
+        "paragraphs": [
+          {
+            "text": "Inaul weaving in Maguindanao and Yakan weaving in Basilan connect artistic knowledge with cultural continuity and livelihoods. These traditions are examples of the autonomous region's diverse heritage.",
+            "sourceIds": [
+              "context-19"
+            ]
+          }
+        ]
+      }
+    ],
+    "notes": [
+      {
+        "text": "Population refers to 1 July 2024. Administrative counts refer to the PSA summary of 30 September 2026. These dated references do not update the map's older boundaries, names or local administrative relationships.",
+        "sourceIds": [
+          "psa-region-19",
+          "psa-psgc"
+        ]
+      },
+      {
+        "text": "Land area and density are taken from Table 3 of PSA's revised release dated 6 July 2026. Area uses the 2019 LMB masterlist and MENRE reference for the Special Geographic Area; density is PSA's published whole-number figure. Neither is measured from the map. Regional area details do not add up to the approximate national total.",
+        "sourceIds": [
+          "psa-density-revised"
+        ]
+      }
+    ]
+  }
+]

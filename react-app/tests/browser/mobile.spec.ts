@@ -28,8 +28,8 @@ test('pilot profile scrolls independently at 320px while header and parent navig
   await page.locator('#detail-close').tap();
   await tapPolygon(page, '1300000000'); await ready(page, '#/region/1300000000');
   await page.getByRole('button', { name: 'Open details menu' }).tap();
-  await expect(page.locator('[data-profile-key]')).toHaveCount(0);
-  await expect(body).toHaveText('No data for this area.');
+  await expect(page.locator('[data-profile-key="region:1300000000"]')).toBeVisible();
+  await expect(page.locator('[data-profile-key="region:0900000000"]')).toHaveCount(0);
 });
 
 async function ready(page: Page, hash: string) {
@@ -93,7 +93,7 @@ test('narrow layout keeps hamburger and long parent Back button independently ta
   const menuBox = (await menu.boundingBox())!, backBox = (await back.boundingBox())!;
   expect(backBox.x).toBeGreaterThanOrEqual(menuBox.x + menuBox.width + 4);
   await menu.tap();
-  await expect(page.getByRole('complementary')).toHaveCSS('width', '320px');
+  await expect(page.getByRole('complementary', { name: 'Location details', exact: true })).toHaveCSS('width', '320px');
   await page.getByRole('button', { name: 'Close details menu' }).tap();
   await back.tap();
   await ready(page, '#/region/900000000');

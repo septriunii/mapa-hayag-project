@@ -21,7 +21,7 @@ test('pilot profiles follow selection, history, reload and exact geographic leve
   await select(page, '900000000'); await ready(page, '#/region/900000000');
   await expect(page.locator(ix)).toContainText('5,089,934');
   await expect(page.locator(ix)).toContainText('0900000000');
-  await expect(page.locator(ix).getByText('Data unavailable', { exact: true })).toHaveCount(2);
+  await expect(page.locator(ix).locator('[data-metric="area"]')).toContainText('18,291.44');
   await expect(page.getByRole('complementary', { name: 'Administrative boundary notice' })).toContainText('does not include Sulu');
   await expect(page.locator(national)).toHaveCount(0);
   await page.screenshot({ path: info.outputPath('profile-region-ix.png') });
@@ -37,8 +37,8 @@ test('pilot profiles follow selection, history, reload and exact geographic leve
   await page.locator('#back-btn').click(); await ready(page, '#/region/900000000');
   await page.locator('#back-btn').click(); await ready(page, '#/');
   await select(page, '1300000000'); await ready(page, '#/region/1300000000');
-  await expect(page.locator('[data-profile-key]')).toHaveCount(0);
-  await expect(page.locator('#detail-body')).toHaveText('No data for this area.');
+  await expect(page.locator('[data-profile-key="region:1300000000"]')).toBeVisible();
+  await expect(page.locator(ix)).toHaveCount(0);
 });
 
 test('source links are direct official URLs and profile scrolling preserves header and map', async ({ page }, info) => {
@@ -95,6 +95,6 @@ test('region-only configuration displays the profile and retains configured data
   await expect(page.locator('#detail-body')).toContainText('<img src=x');
   await expect(page.locator('#detail img')).toHaveCount(0);
   await select(page, '1300000000');
-  await expect(page.locator('[data-profile-key]')).toHaveCount(0);
-  await expect(page.locator('#detail-body')).toHaveText('No data for this area.');
+  await expect(page.locator('[data-profile-key="region:1300000000"]')).toBeVisible();
+  await expect(page.locator(ix)).toHaveCount(0);
 });
