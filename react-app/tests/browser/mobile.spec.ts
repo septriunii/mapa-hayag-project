@@ -1,6 +1,37 @@
 import { expect, test, type Page } from '@playwright/test';
 import { selectSvgLabel } from './svgInput';
 
+test('pilot profile scrolls independently at 320px while header and parent navigation remain usable', async ({ page }, info) => {
+  await page.setViewportSize({ width: 320, height: 568 });
+  await page.goto('/#/region/900000000'); await ready(page, '#/region/900000000');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
+  await expect(page.locator('#detail')).toHaveCSS('transform', 'matrix(1, 0, 0, 1, 0, 0)');
+  await page.waitForFunction(() => [...document.querySelectorAll('svg path, svg text')].every(node => getComputedStyle(node).opacity === '1'));
+  const header = await page.locator('#detail-header').boundingBox();
+  await expect(page.locator('[data-profile-key="region:0900000000"]')).toBeVisible();
+  expect(await page.locator('#detail-body').evaluate(node => node.scrollWidth <= node.clientWidth)).toBe(true);
+  await page.screenshot({ path: info.outputPath('profile-narrow-top.png') });
+  // Scroll to the source list and verify the panel's independent scroll container.
+  const mapTransform = await page.locator('svg > g').getAttribute('transform');
+  const body = page.locator('#detail-body');
+  await body.evaluate(node => { node.scrollTop = node.scrollHeight; });
+  await expect.poll(() => body.evaluate(node => node.scrollTop)).toBeGreaterThan(0);
+  expect(await page.locator('#detail-header').boundingBox()).toEqual(header);
+  await expect(page.locator('svg > g')).toHaveAttribute('transform', mapTransform!);
+  await expect(page.locator('#detail-close')).toBeVisible();
+  await page.screenshot({ path: info.outputPath('profile-narrow-sources.png') });
+  await page.locator('#detail-close').tap();
+  await page.locator('#back-btn').tap(); await ready(page, '#/');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
+  await expect(page.locator('[data-profile-key="national"]')).toBeVisible();
+  await expect.poll(() => body.evaluate(node => node.scrollTop)).toBe(0);
+  await page.locator('#detail-close').tap();
+  await tapPolygon(page, '1300000000'); await ready(page, '#/region/1300000000');
+  await page.getByRole('button', { name: 'Open details menu' }).tap();
+  await expect(page.locator('[data-profile-key]')).toHaveCount(0);
+  await expect(body).toHaveText('No data for this area.');
+});
+
 async function ready(page: Page, hash: string) {
   await expect(page.locator('svg')).toHaveAttribute('data-view', hash);
   await expect(page.locator('svg')).toHaveAttribute('aria-busy', 'false');

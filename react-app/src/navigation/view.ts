@@ -7,6 +7,8 @@ import { nameProperty } from '../geography/types';
 import { parentRoute, type MapRoute } from './routes';
 
 export interface LocationDetails {
+  level: GeographicLevel;
+  psgc: Psgc;
   name: string;
   parent: string;
   typeLabel: string;
@@ -21,6 +23,7 @@ export interface MapView extends GeographicView {
 
 export function locationDetails(feature: GeographicFeature, level: GeographicLevel, parent: string, config: MapConfig): LocationDetails {
   return {
+    level, psgc: featureCode(feature, level),
     name: feature.properties[nameProperty[level]] ?? featureCode(feature, level), parent,
     typeLabel: { region: 'Region', province: 'Province / District', municity: 'City / Municipality' }[level],
     record: config.data[level].find(record => record.psgc === featureCode(feature, level)),

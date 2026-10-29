@@ -112,10 +112,10 @@ test('keeps the baseline welcome drawer shell with approved Segoe UI information
     return { x: box.x, y: box.y, width: box.width, height: box.height };
   };
   expect(await page.evaluate(snapshot)).toEqual(await baseline.evaluate(snapshot));
-  for (const selector of ['#detail-eyebrow', '#detail-lgu-name', '#detail-region', '#detail-body p']) {
+  for (const selector of ['#detail-eyebrow', '#detail-lgu-name', '#detail-region', '#map-description']) {
     await expect(page.locator(selector)).toHaveCSS('font-family', /Segoe UI/);
   }
   await expect(page.locator('#detail-lgu-name')).toHaveCSS('font-weight', '600');
-  await expect(page.locator('#detail-body p')).toHaveCSS('font-weight', '400');
+  await expect(page.locator('#map-description')).toHaveCSS('font-weight', '400');
   await baseline.close();
 });

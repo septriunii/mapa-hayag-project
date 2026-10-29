@@ -53,7 +53,7 @@ test('cartographic theme uses the reference palette with readable geographic sta
   await expect(page.locator('#detail')).toHaveCSS('border-right-color', palette.divider);
   await expect(page.locator('#detail-header')).toHaveCSS('border-bottom-color', palette.divider);
   await expect(page.locator('#detail-lgu-name')).toHaveCSS('color', palette.primary);
-  await expect(page.locator('#detail-body p')).toHaveCSS('color', palette.primary);
+  await expect(page.locator('#map-description')).toHaveCSS('color', palette.primary);
   for (const id of ['detail-eyebrow', 'detail-close', 'detail-region', 'status']) {
     await expect(page.locator('#' + id)).toHaveCSS('color', palette.secondary);
   }
@@ -131,6 +131,7 @@ test('administrative linework stays thin through wheel zoom, pan and every drill
     await expect(svg).toHaveAttribute('data-view', hash);
     await expect(svg).toHaveAttribute('aria-busy', 'false');
     // Hash navigation retains the existing drawer state; city arrival opens it.
+    if (hash.includes('/municity/')) await expect(page.getByRole('button', { name: 'Close details menu' })).toBeVisible();
     if (await page.getByRole('button', { name: 'Close details menu' }).isVisible()) {
       await page.getByRole('button', { name: 'Close details menu' }).click();
     }

@@ -1,0 +1,57 @@
+[
+  {
+    "key": "national", "level": "national", "psgc": null,
+    "name": "Philippines", "levelLabel": "Country", "subtitle": "Republic of the Philippines · Southeast Asia",
+    "coverage": "National census and administrative references", "checkedDate": "2026-10-27",
+    "metrics": [
+      { "id": "population", "label": "Population", "value": 112729484, "unit": "people", "status": "verified", "referenceDate": "2024-07-01", "sourceIds": ["psa-census"], "note": "2024 census; not a live estimate." },
+      { "id": "area", "label": "Land area", "value": 300000, "unit": "km²", "approximate": true, "status": "verified", "referenceDate": "2024-07-01", "sourceIds": ["psa-density"], "note": "Rounded PSA reference." },
+      { "id": "density", "label": "Population density", "value": 376, "unit": "people/km²", "status": "verified", "referenceDate": "2024-07-01", "sourceIds": ["psa-density"], "note": "Resident-population basis." },
+      { "id": "regions", "label": "Regions", "value": 18, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "provinces", "label": "Provinces", "value": 82, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "cities", "label": "Cities", "value": 149, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "municipalities", "label": "Municipalities", "value": 1493, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "barangays", "label": "Barangays", "value": 42010, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"], "note": "Administrative count only; this map does not offer barangay drilldown." }
+    ],
+    "notices": [],
+    "sections": [
+      { "title": "Geography and Location", "paragraphs": [{ "text": "The Philippines is an archipelago in Southeast Asia's western Pacific. Its islands are grouped into Luzon, Visayas and Mindanao, with coastal, forest and marine landscapes. Its tropical maritime climate is influenced by tropical cyclones.", "sourceIds": ["country-background", "climate"] }] },
+      { "title": "History and Administration", "paragraphs": [{ "text": "Indigenous communities and maritime exchange preceded Spanish colonial rule. Independence was proclaimed on 12 June 1898; American rule and Japanese occupation followed, before independence in 1946. The republic is organized into regions, provinces, cities, municipalities and barangays, with special arrangements in some areas.", "sourceIds": ["country-background", "history", "psa-psgc"] }] },
+      { "title": "Economy and Culture", "paragraphs": [{ "text": "Services, industry and agriculture support the economy, alongside tourism, overseas remittances and business-process outsourcing. Indigenous traditions and historical Asian and Western connections shape a diverse cultural landscape. Filipino and English are official languages, alongside a rich regional linguistic heritage.", "sourceIds": ["country-background"] }] }
+    ],
+    "notes": [
+      { "text": "The 2024 census total includes 1,708 Filipinos in embassies, consulates and missions abroad. PSA's published density uses 112,727,776 residents, excluding those 1,708, and an approximately 300,000 km² national area. The density shown is PSA's published figure, not a calculation from the map.", "sourceIds": ["psa-census", "psa-density"] },
+      { "text": "Population refers to 1 July 2024; administrative counts refer to 30 September 2026. These are dated references, not real-time estimates. The map retains its 2023-derived geography and NIR/legacy options; contemporary statistics do not update its boundaries or names.", "sourceIds": ["psa-census", "psa-psgc"] }
+    ]
+  },
+  {
+    "key": "region:0900000000", "level": "region", "psgc": "0900000000",
+    "name": "Region IX (Zamboanga Peninsula)", "levelLabel": "Region", "subtitle": "Philippines",
+    "coverage": "PSA administrative coverage, including Sulu", "checkedDate": "2026-10-27",
+    "metrics": [
+      { "id": "population", "label": "Population · includes Sulu", "value": 5089934, "unit": "people", "status": "verified", "referenceDate": "2024-07-01", "sourceIds": ["psa-region-ix"], "note": "Regrouped 2024 census count." },
+      { "id": "provinces", "label": "Provinces", "value": 4, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "cities", "label": "Cities", "value": 5, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "municipalities", "label": "Municipalities", "value": 86, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "barangays", "label": "Barangays", "value": 2314, "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc"] },
+      { "id": "psgc", "label": "Region PSGC", "value": "0900000000", "status": "verified", "referenceDate": "2026-09-30", "sourceIds": ["psa-psgc", "psa-region-ix"] },
+      { "id": "area", "label": "Land area", "value": null, "unit": "km²", "status": "unavailable", "referenceDate": null, "sourceIds": [], "note": "A compatible land-area figure for the updated region including Sulu has not been verified in this pilot." },
+      { "id": "density", "label": "Population density", "value": null, "unit": "people/km²", "status": "unavailable", "referenceDate": null, "sourceIds": [], "note": "Withheld until a verified area and population use the same administrative coverage. No estimate is calculated." }
+    ],
+    "notices": [
+      { "title": "Administrative boundary notice", "text": "These statistics include Sulu. The map shows the older three-province grouping and Isabela City; it does not include Sulu in Region IX. Do not interpret the figures below as totals for the displayed polygons. EO 91, dated 30 July 2025, declared Sulu part of Region IX.", "sourceIds": ["psa-psgc", "psa-region-ix", "eo91"] }
+    ],
+    "sections": [
+      { "title": "Geography and Location", "paragraphs": [{ "text": "Zamboanga Peninsula occupies western Mindanao. The current PSA administrative grouping includes Zamboanga del Norte, Zamboanga del Sur, Zamboanga Sibugay and Sulu, with Zamboanga and Isabela cities listed separately in the PSGC. This contemporary grouping extends beyond the older Region IX geography displayed here.", "sourceIds": ["psa-psgc", "psa-region-ix", "eo36", "eo91"] }] },
+      { "title": "History and Administration", "paragraphs": [{ "text": "EO 36 of 19 September 2001 reorganized Region IX as Zamboanga Peninsula, listing the three Zamboanga provinces and five cities. After the Supreme Court affirmed Sulu's exclusion from BARMM, EO 91 of 30 July 2025 declared Sulu part of Region IX and provided for the administrative transition.", "sourceIds": ["eo36", "eo91"] }] },
+      { "title": "Economy and Culture", "paragraphs": [
+        { "text": "Agriculture, fisheries, manufacturing and trade form part of the peninsula's economy. PSA's pre-transfer regional Quickstat records coconut, rubber and fish production. These sector examples describe the peninsula; no older economic total is presented as a total for the expanded region.", "sourceIds": ["regional-economy"] },
+        { "text": "The region's cultural landscape includes Subanen communities and Chavacano-speaking populations, while Sulu has deep Tausug cultural and maritime connections. These are examples of its cultural diversity, not an exhaustive list of communities or languages.", "sourceIds": ["subanen", "chavacano", "tausug"] }
+      ] }
+    ],
+    "notes": [
+      { "text": "The current PSGC page reports 5,089,934 for the 2024 census under the newer regional grouping. The original regional release reports 3,943,837 using older coverage. They are different geographic groupings of the same census reference, not competing live estimates.", "sourceIds": ["psa-region-ix", "psa-region-original", "eo91"] },
+      { "text": "Administrative counts and the profile's PSGC refer to the 30 September 2026 PSA summary. The map retains older source codes and boundaries; the contemporary statistics do not update the geographic area shown.", "sourceIds": ["psa-psgc", "psa-region-ix"] }
+    ]
+  }
+]
